@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>The Career Bridge — Career & Interview Support for Software Developers</title>
+  <title>The Career Bridge — Career & Interview Support for Software Engineers</title>
 
   <meta
     name="description"
-    content="Career and interview support for Software Developers. Understand what a role is really looking for, connect it to your experience, and communicate it clearly."
+    content="Career and interview support for Software Engineers. Understand what a role is really looking for, connect it to your experience, and communicate that fit clearly."
   />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -197,21 +197,16 @@
       margin-bottom: 28px;
     }
 
+    h1 span {
+      color: var(--accent);
+    }
+
     .hero-description {
       font-size: 20px;
       line-height: 1.55;
       color: var(--muted);
       max-width: 680px;
-      margin-bottom: 22px;
-    }
-
-    .hero-urgency {
-      font-size: 15px;
-      line-height: 1.55;
-      color: var(--accent-dark);
-      max-width: 620px;
       margin-bottom: 34px;
-      font-weight: 500;
     }
 
     .hero-card {
@@ -227,23 +222,40 @@
       text-transform: uppercase;
       letter-spacing: 0.08em;
       color: var(--muted);
-      margin-bottom: 24px;
-    }
-
-    .hero-card blockquote {
-      font-family: "Playfair Display", serif;
-      font-size: 29px;
-      line-height: 1.3;
-      letter-spacing: -0.02em;
       margin-bottom: 28px;
     }
 
-    .hero-card-author {
-      font-size: 14px;
+    .method-step {
+      padding: 20px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .method-step:last-child {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .method-step strong {
+      display: block;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 5px;
+    }
+
+    .method-step span {
+      display: block;
+      font-family: "Playfair Display", serif;
+      font-size: 23px;
+      line-height: 1.25;
+    }
+
+    .hero-card-note {
+      margin-top: 24px;
+      font-size: 13px;
       color: var(--muted);
     }
 
-    /* STATS */
+    /* CREDIBILITY */
 
     .stats {
       border-top: 1px solid var(--border);
@@ -329,23 +341,20 @@
       padding: 32px;
     }
 
-    .problem-number,
-    .work-number {
+    .problem-number {
       color: var(--accent);
       font-size: 13px;
       font-weight: 700;
       margin-bottom: 45px;
     }
 
-    .problem-card h3,
-    .work-card h3 {
+    .problem-card h3 {
       font-size: 21px;
       line-height: 1.25;
       margin-bottom: 14px;
     }
 
-    .problem-card p,
-    .work-card p {
+    .problem-card p {
       color: var(--muted);
       font-size: 15px;
     }
@@ -379,6 +388,10 @@
       font-size: 18px;
       color: var(--muted);
       max-width: 550px;
+    }
+
+    .approach-copy p + p {
+      margin-top: 22px;
     }
 
     .steps {
@@ -415,16 +428,98 @@
       font-size: 15px;
     }
 
-    .approach-quote {
-      margin-top: 70px;
-      max-width: 850px;
+    .framework {
+      margin-top: 65px;
+      padding: 28px 0;
+      border-top: 1px solid rgba(24, 32, 29, 0.18);
+      border-bottom: 1px solid rgba(24, 32, 29, 0.18);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .framework-label {
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .framework-value {
       font-family: "Playfair Display", serif;
-      font-size: clamp(28px, 3vw, 40px);
-      line-height: 1.25;
+      font-size: clamp(28px, 4vw, 46px);
       letter-spacing: -0.03em;
     }
 
+    /* EXAMPLE */
+
+    .example {
+      background: var(--surface);
+    }
+
+    .example-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 90px;
+      align-items: start;
+    }
+
+    .example-title {
+      font-family: "Playfair Display", serif;
+      font-size: 42px;
+      line-height: 1.1;
+      letter-spacing: -0.035em;
+    }
+
+    .example-copy {
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .example-card {
+      margin-top: 35px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .example-block {
+      padding: 25px 28px;
+    }
+
+    .example-block + .example-block {
+      border-top: 1px solid var(--border);
+    }
+
+    .example-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .example-block p {
+      font-size: 15px;
+      color: var(--muted);
+    }
+
+    .example-block.highlight {
+      background: var(--accent-light);
+    }
+
+    .example-block.highlight p {
+      color: var(--accent-dark);
+      font-weight: 500;
+    }
+
     /* EXPERIENCE */
+
+    .experience {
+      background: var(--bg);
+    }
 
     .experience-grid {
       display: grid;
@@ -508,29 +603,142 @@
       color: var(--muted);
     }
 
-    /* WORK */
+    /* SERVICES */
 
-    .work-on {
-      background: var(--bg);
+    .services {
+      background: var(--cream);
     }
 
-    .work-grid {
+    .services-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 90px;
+      align-items: start;
     }
 
-    .work-card {
+    .services-title {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(40px, 5vw, 62px);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      font-weight: 500;
+    }
+
+    .services-copy {
+      color: var(--muted);
+      font-size: 17px;
+      margin-top: 22px;
+      max-width: 500px;
+    }
+
+    .founding-note {
+      margin-top: 25px;
+      color: var(--accent-dark);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .service-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .service-card {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 35px;
+      border-radius: 15px;
+      padding: 25px 28px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .service-card h3 {
+      font-size: 19px;
+      margin-bottom: 5px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .service-details {
+      margin-top: 13px;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .service-details li + li {
+      margin-top: 3px;
+    }
+
+    .service-price {
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .service-price-label {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .service-price-value {
+      font-size: 25px;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .services-cta {
+      margin-top: 15px;
+    }
+
+    /* DIFFERENCE */
+
+    .difference {
+      background: var(--surface);
+    }
+
+    .difference-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 90px;
+      align-items: center;
+    }
+
+    .difference-list {
+      list-style: none;
+    }
+
+    .difference-list li {
+      padding: 22px 0;
+      border-top: 1px solid var(--border);
+      font-size: 18px;
+    }
+
+    .difference-list li:last-child {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .difference-list strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .difference-list span {
+      color: var(--muted);
+      font-size: 15px;
     }
 
     /* INTRO CALL */
 
     .intro-call {
-      background: var(--surface);
+      background: var(--bg);
     }
 
     .intro-call-box {
@@ -541,7 +749,7 @@
       justify-content: space-between;
       align-items: center;
       gap: 50px;
-      background: var(--bg);
+      background: var(--surface);
     }
 
     .intro-call-box h2 {
@@ -559,117 +767,6 @@
       font-size: 14px;
       color: var(--accent-dark);
       font-weight: 500;
-    }
-
-    /* FOUNDING */
-
-    .founding {
-      background: var(--cream);
-    }
-
-    .founding-grid {
-      display: grid;
-      grid-template-columns: 0.85fr 1.15fr;
-      gap: 90px;
-      align-items: center;
-    }
-
-    .founding-title {
-      font-family: "Playfair Display", serif;
-      font-size: clamp(40px, 5vw, 62px);
-      line-height: 1.05;
-      letter-spacing: -0.04em;
-      font-weight: 500;
-    }
-
-    .founding-copy {
-      color: var(--muted);
-      font-size: 17px;
-      margin-top: 22px;
-      max-width: 500px;
-    }
-
-    .founding-note {
-      margin-top: 25px;
-      color: var(--accent-dark);
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    .founding-services {
-      display: grid;
-      gap: 12px;
-    }
-
-    .founding-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 15px;
-      padding: 24px 28px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .founding-card h3 {
-      font-size: 18px;
-      margin-bottom: 3px;
-    }
-
-    .founding-card p {
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .founding-price {
-      text-align: right;
-      white-space: nowrap;
-    }
-
-    .founding-label {
-      display: block;
-      color: var(--muted);
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .new-price {
-      font-size: 25px;
-      font-weight: 700;
-      color: var(--accent);
-    }
-
-    .founding-cta {
-      margin-top: 15px;
-    }
-
-    /* DIFFERENCE */
-
-    .not-about {
-      background: var(--surface);
-    }
-
-    .not-about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 90px;
-      align-items: center;
-    }
-
-    .not-about-list {
-      list-style: none;
-    }
-
-    .not-about-list li {
-      padding: 22px 0;
-      border-top: 1px solid var(--border);
-      font-size: 18px;
-    }
-
-    .not-about-list li:last-child {
-      border-bottom: 1px solid var(--border);
     }
 
     /* FAQ */
@@ -797,10 +894,11 @@
 
       .hero-grid,
       .approach-intro,
+      .example-grid,
       .experience-grid,
       .audience-main,
-      .founding-grid,
-      .not-about-grid {
+      .services-grid,
+      .difference-grid {
         grid-template-columns: 1fr;
         gap: 45px;
       }
@@ -818,8 +916,7 @@
         padding-left: 0;
       }
 
-      .problem-grid,
-      .work-grid {
+      .problem-grid {
         grid-template-columns: 1fr;
       }
 
@@ -836,6 +933,14 @@
 
       .step:last-child {
         border-bottom: none;
+      }
+
+      .framework {
+        display: block;
+      }
+
+      .framework-value {
+        margin-top: 10px;
       }
 
       .early-career {
@@ -873,10 +978,6 @@
         font-size: 17px;
       }
 
-      .hero-urgency {
-        font-size: 14px;
-      }
-
       .stats-grid {
         grid-template-columns: 1fr 1fr;
       }
@@ -893,17 +994,16 @@
         font-size: 12px;
       }
 
-      .problem-card,
-      .work-card {
+      .problem-card {
         padding: 25px;
       }
 
-      .founding-card {
-        flex-direction: column;
-        align-items: flex-start;
+      .service-card {
+        grid-template-columns: 1fr;
+        gap: 15px;
       }
 
-      .founding-price {
+      .service-price {
         text-align: left;
       }
 
@@ -941,7 +1041,7 @@
           target="_blank"
           rel="noopener"
         >
-          Free 20-minute intro call
+          Free intro call
         </a>
       </div>
 
@@ -960,22 +1060,20 @@
         <div>
 
           <div class="eyebrow">
-            Career & interview support for Software Developers
+            Career & interview support for Software Engineers
           </div>
 
           <h1>
-            When the right role opens, be ready to show you're the right fit.
+            You already have the experience.
+            <br>
+            <span>Make the right experience visible.</span>
           </h1>
 
           <p class="hero-description">
-            I help Software Developers understand what a role is really
-            looking for, connect it to their experience, and make that
-            experience easier to recognise — from application to interview.
-          </p>
-
-          <p class="hero-urgency">
-            Good roles don't stay open forever. If you're looking at a role
-            now, don't wait until the interview to prepare.
+            I help software engineers understand what a specific role is
+            really looking for, connect those requirements to their own
+            experience, and communicate that fit clearly — from CV to
+            interview.
           </p>
 
           <div class="button-row">
@@ -986,14 +1084,14 @@
               target="_blank"
               rel="noopener"
             >
-              Book a free 20-minute intro call
+              Book a free intro call
             </a>
 
             <a
-              href="#services"
+              href="#approach"
               class="button button-secondary"
             >
-              Explore sessions
+              See how it works
             </a>
 
           </div>
@@ -1004,16 +1102,27 @@
         <div class="hero-card">
 
           <div class="hero-card-label">
-            The principle
+            The Career Bridge method
           </div>
 
-          <blockquote>
-            “The goal isn't to make you sound like someone else.
-            It's to make your actual experience easier to recognise.”
-          </blockquote>
+          <div class="method-step">
+            <strong>01 — ROLE</strong>
+            <span>What are they really hiring for?</span>
+          </div>
 
-          <div class="hero-card-author">
-            Online · English / Italian
+          <div class="method-step">
+            <strong>02 — EVIDENCE</strong>
+            <span>Where have you already demonstrated it?</span>
+          </div>
+
+          <div class="method-step">
+            <strong>03 — SIGNAL</strong>
+            <span>How do we make that obvious?</span>
+          </div>
+
+          <div class="hero-card-note">
+            No generic templates. No invented stories. Your experience,
+            connected to the role.
           </div>
 
         </div>
@@ -1023,7 +1132,7 @@
     </section>
 
 
-    <!-- STATS -->
+    <!-- CREDIBILITY -->
 
     <div class="stats">
 
@@ -1031,18 +1140,22 @@
 
         <div class="stat">
           <div class="stat-number">15+</div>
-          <div class="stat-label">Years in tech</div>
+          <div class="stat-label">
+            Years in software & engineering
+          </div>
         </div>
 
         <div class="stat">
           <div class="stat-number">200+</div>
-          <div class="stat-label">Interviews conducted</div>
+          <div class="stat-label">
+            Technical interviews
+          </div>
         </div>
 
         <div class="stat">
           <div class="stat-number">FAANG</div>
           <div class="stat-label">
-            Several years as a Software Developer & Engineering Manager
+            Software Developer & Engineering Manager experience
           </div>
         </div>
 
@@ -1090,12 +1203,12 @@
             <div class="problem-number">01</div>
 
             <h3>
-              Your CV isn't getting the response you expect.
+              “I don't know what to emphasise.”
             </h3>
 
             <p>
-              You have the experience, but your CV doesn't make the
-              connection with the role obvious.
+              A job description can list ten requirements. You may match
+              six of them. Which six matter most?
             </p>
 
           </article>
@@ -1106,12 +1219,12 @@
             <div class="problem-number">02</div>
 
             <h3>
-              You have an interview coming up.
+              “My experience sounds better in my head.”
             </h3>
 
             <p>
-              You know your work. The difficult part is knowing which
-              examples to use and how to communicate them clearly.
+              You know what you did. The difficult part is turning it into
+              evidence that's clear to someone who wasn't there.
             </p>
 
           </article>
@@ -1122,12 +1235,13 @@
             <div class="problem-number">03</div>
 
             <h3>
-              You're early in your career.
+              “I know I can do the job. I'm not showing it.”
             </h3>
 
             <p>
-              You don't need ten years of experience to have good stories.
-              Projects, internships and open source can all provide evidence.
+              You have the experience, but you're unsure which examples to
+              use, how much detail to give, or what the interviewer is
+              really assessing.
             </p>
 
           </article>
@@ -1156,16 +1270,22 @@
           <div class="approach-copy">
 
             <p>
-              Most career advice starts with generic CV templates and
-              interview tips.
+              Most career advice starts with you: your CV, your experience,
+              your answers.
             </p>
 
-            <br>
+            <p>
+              I start from the other side of the table.
+            </p>
 
             <p>
-              I take a different approach. Having worked on the hiring side,
-              I start by understanding what the company needs, then connect
-              that to evidence from your own experience.
+              We look at the role first. What level is it? What problems is
+              the team hiring you to solve? What signals will the interviewer
+              be looking for?
+            </p>
+
+            <p>
+              Then we work backwards into your experience.
             </p>
 
           </div>
@@ -1178,16 +1298,16 @@
           <div class="step">
 
             <div class="step-number">
-              01 — UNDERSTAND
+              01 — DECODE
             </div>
 
             <h3>
-              What is the company actually looking for?
+              What are they really hiring for?
             </h3>
 
             <p>
-              We look at the role, level and problems you're likely to
-              encounter.
+              We look at the role, level, responsibilities and problems
+              you're likely to encounter.
             </p>
 
           </div>
@@ -1196,16 +1316,16 @@
           <div class="step">
 
             <div class="step-number">
-              02 — CONNECT
+              02 — FIND
             </div>
 
             <h3>
-              Where is that evidence in your experience?
+              Where have you already done this?
             </h3>
 
             <p>
-              We identify concrete examples from your work, studies or
-              projects.
+              We identify concrete evidence from your work, studies,
+              projects or leadership experience.
             </p>
 
           </div>
@@ -1218,11 +1338,12 @@
             </div>
 
             <h3>
-              How can you make that evidence easy to recognise?
+              How do we make it visible?
             </h3>
 
             <p>
-              We improve your CV, examples and interview answers.
+              We turn that evidence into stronger CV bullets, stories and
+              interview answers.
             </p>
 
           </div>
@@ -1230,9 +1351,100 @@
         </div>
 
 
-        <div class="approach-quote">
-          The goal isn't to make you sound like someone else.
-          It's to make your actual experience easier to recognise.
+        <div class="framework">
+
+          <div class="framework-label">
+            The framework
+          </div>
+
+          <div class="framework-value">
+            Role → Evidence → Signal
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- EXAMPLE -->
+
+    <section class="example">
+
+      <div class="container example-grid">
+
+        <div>
+
+          <div class="section-label">
+            See the difference
+          </div>
+
+          <div class="example-title">
+            Better wording isn't the goal.
+            <br>
+            <span>Better evidence is.</span>
+          </div>
+
+        </div>
+
+
+        <div class="example-copy">
+
+          <p>
+            Imagine a role asking for experience designing scalable
+            distributed systems.
+          </p>
+
+          <div class="example-card">
+
+            <div class="example-block">
+
+              <div class="example-label">
+                The job description
+              </div>
+
+              <p>
+                “Experience designing scalable distributed systems.”
+              </p>
+
+            </div>
+
+
+            <div class="example-block">
+
+              <div class="example-label">
+                A generic CV bullet
+              </div>
+
+              <p>
+                “Worked on distributed systems and improved system
+                performance.”
+              </p>
+
+            </div>
+
+
+            <div class="example-block highlight">
+
+              <div class="example-label">
+                The questions we'd ask
+              </div>
+
+              <p>
+                What did you actually design? What constraint did you face?
+                What decision did you make? What changed as a result?
+              </p>
+
+            </div>
+
+          </div>
+
+          <p style="margin-top: 22px;">
+            The point isn't to make the sentence sound impressive.
+            It's to find the evidence that shows you can actually do the job.
+          </p>
+
         </div>
 
       </div>
@@ -1242,19 +1454,19 @@
 
     <!-- EXPERIENCE -->
 
-    <section id="experience">
+    <section class="experience" id="experience">
 
       <div class="container experience-grid">
 
         <div class="experience-statement">
-          I've been on both sides of the interview.
+          I've spent years on both sides of the interview.
         </div>
 
         <div class="experience-copy">
 
           <p>
-            I've spent more than 15 years working in technology across
-            software development and engineering management.
+            Over 15 years in technology, I've worked across software
+            development and engineering management.
           </p>
 
           <p>
@@ -1265,12 +1477,19 @@
           </p>
 
           <p>
-            I've hired developers, built teams and worked on hiring processes,
-            performance reviews, feedback and career development.
+            I've hired developers, built teams and worked on hiring
+            processes, performance reviews, feedback and career development.
+          </p>
+
+          <p>
+            I've also been the candidate — trying to communicate technical
+            work to people who weren't in the room when it happened.
           </p>
 
           <div class="experience-highlight">
-            My approach is shaped by experience on both sides of the hiring process — from building software and teams to interviewing and hiring developers.
+            That's the perspective behind The Career Bridge:
+            understanding what hiring teams are looking for, then helping
+            candidates make their own evidence easier to recognise.
           </div>
 
         </div>
@@ -1293,7 +1512,7 @@
           </div>
 
           <h2>
-            Career support for Software Developers.
+            Software engineers preparing for their next role.
           </h2>
 
         </div>
@@ -1302,22 +1521,22 @@
         <div class="audience-main">
 
           <div class="audience-title">
-            From your first role to your next senior position.
+            Make your next move with a clearer picture of what you're
+            actually being hired to do.
           </div>
 
           <div class="audience-copy">
 
             <p>
-              Whether you're applying for your first job, looking for your
-              next opportunity, preparing for an interview, or trying to
-              communicate your experience more effectively, we'll focus on
-              the specific challenge you're facing.
+              Most of my work is with software engineers who already have
+              professional experience and are preparing for their next move
+              — a new company, a more senior role, or a move towards
+              technical leadership.
             </p>
 
             <p>
-              If you're moving towards technical leadership, we can also
-              work on how you communicate the leadership and technical
-              decisions already present in your experience.
+              We'll focus on the specific role and challenge in front of
+              you, rather than generic career advice.
             </p>
 
           </div>
@@ -1328,11 +1547,11 @@
         <div class="early-career">
 
           <h3>
-            Just starting out?
+            Early in your career?
           </h3>
 
           <p>
-            You don't need a long employment history.
+            I can help with that too.
             University projects, internships, open-source contributions and
             personal projects can all provide evidence of how you work and
             what you can do.
@@ -1347,167 +1566,30 @@
     </section>
 
 
-    <!-- WORK -->
+    <!-- SERVICES -->
 
-    <section class="work-on">
+    <section class="services" id="services">
 
-      <div class="container">
-
-        <div class="section-header">
-
-          <div class="section-label">
-            What we'll work on
-          </div>
-
-          <h2>
-            Every session is focused on something specific.
-          </h2>
-
-          <p class="section-intro">
-            No generic career advice. We'll work on the role, application
-            or interview that matters to you.
-          </p>
-
-        </div>
-
-
-        <div class="work-grid">
-
-          <article class="work-card">
-
-            <div class="work-number">
-              01
-            </div>
-
-            <h3>
-              Your CV
-            </h3>
-
-            <p>
-              Make your experience relevant and easy to understand for the
-              role you're targeting.
-            </p>
-
-          </article>
-
-
-          <article class="work-card">
-
-            <div class="work-number">
-              02
-            </div>
-
-            <h3>
-              Your interview
-            </h3>
-
-            <p>
-              Turn your real experience into clear, structured answers and
-              learn how to communicate your examples effectively.
-            </p>
-
-          </article>
-
-
-          <article class="work-card">
-
-            <div class="work-number">
-              03
-            </div>
-
-            <h3>
-              Your next move
-            </h3>
-
-            <p>
-              Understand what you're aiming for, what the role requires and
-              what you need to demonstrate to get there.
-            </p>
-
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- FREE INTRO CALL -->
-
-    <section class="intro-call">
-
-      <div class="container">
-
-        <div class="intro-call-box">
-
-          <div>
-
-            <div class="section-label">
-              Looking at a role right now?
-            </div>
-
-            <h2>
-              Start with a conversation.
-            </h2>
-
-            <p>
-              Book a free 20-minute intro call. Tell me what you're working
-              towards, what's currently difficult, and we'll see whether
-              I can help.
-            </p>
-
-            <div class="intro-call-note">
-              If you already have a role in mind, bring it to the call.
-            </div>
-
-          </div>
-
-
-          <div>
-
-            <a
-              href="https://calendly.com/d/dtpn-7c6-gkz"
-              class="button button-primary"
-              target="_blank"
-              rel="noopener"
-            >
-              Book a free 20-minute intro call
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- FOUNDING SESSIONS -->
-
-    <section class="founding" id="services">
-
-      <div class="container founding-grid">
+      <div class="container services-grid">
 
         <div>
 
           <div class="section-label">
-            Launch offer
+            Founding clients
           </div>
 
-          <div class="founding-title">
-            Founding sessions.
+          <div class="services-title">
+            Focused sessions for the role that matters to you.
           </div>
 
-          <p class="founding-copy">
-            I'm currently building The Career Bridge and opening a limited
-            number of initial sessions.
+          <p class="services-copy">
+            I'm opening a limited number of founding client spots while I
+            develop The Career Bridge.
           </p>
 
-          <p class="founding-copy">
-            The first sessions are offered at a reduced founding price while
-            I develop and refine the service.
+          <p class="services-copy">
+            Founding clients get the service at a reduced rate in exchange
+            for feedback that helps shape the experience.
           </p>
 
           <p class="founding-note">
@@ -1517,26 +1599,35 @@
         </div>
 
 
-        <div class="founding-services">
+        <div class="service-list">
 
-          <article class="founding-card">
+          <article class="service-card">
 
             <div>
+
               <h3>
                 CV + Role Fit
               </h3>
 
               <p>
-                60 minutes · CV + target role
+                60 minutes · Your CV + target role
               </p>
+
+              <ul class="service-details">
+                <li>Target role analysis</li>
+                <li>CV review</li>
+                <li>Identify your strongest evidence</li>
+                <li>Concrete changes to make</li>
+              </ul>
+
             </div>
 
-            <div class="founding-price">
-              <span class="founding-label">
+            <div class="service-price">
+              <span class="service-price-label">
                 Founding price
               </span>
 
-              <span class="new-price">
+              <span class="service-price-value">
                 €50
               </span>
             </div>
@@ -1544,9 +1635,10 @@
           </article>
 
 
-          <article class="founding-card">
+          <article class="service-card">
 
             <div>
+
               <h3>
                 Interview Prep
               </h3>
@@ -1554,14 +1646,22 @@
               <p>
                 90 minutes · Role analysis + mock interview
               </p>
+
+              <ul class="service-details">
+                <li>Understand what the role is assessing</li>
+                <li>Select your strongest examples</li>
+                <li>Mock interview</li>
+                <li>Detailed feedback</li>
+              </ul>
+
             </div>
 
-            <div class="founding-price">
-              <span class="founding-label">
+            <div class="service-price">
+              <span class="service-price-label">
                 Founding price
               </span>
 
-              <span class="new-price">
+              <span class="service-price-value">
                 €70
               </span>
             </div>
@@ -1569,9 +1669,10 @@
           </article>
 
 
-          <article class="founding-card">
+          <article class="service-card">
 
             <div>
+
               <h3>
                 Application + Interview
               </h3>
@@ -1579,14 +1680,22 @@
               <p>
                 Complete preparation
               </p>
+
+              <ul class="service-details">
+                <li>Role + CV analysis</li>
+                <li>Application strategy</li>
+                <li>Interview preparation</li>
+                <li>Mock interview + feedback</li>
+              </ul>
+
             </div>
 
-            <div class="founding-price">
-              <span class="founding-label">
+            <div class="service-price">
+              <span class="service-price-label">
                 Founding price
               </span>
 
-              <span class="new-price">
+              <span class="service-price-value">
                 €110
               </span>
             </div>
@@ -1594,7 +1703,7 @@
           </article>
 
 
-          <div class="founding-cta">
+          <div class="services-cta">
 
             <a
               href="https://calendly.com/d/dtpn-7c6-gkz"
@@ -1616,9 +1725,9 @@
 
     <!-- DIFFERENCE -->
 
-    <section class="not-about">
+    <section class="difference">
 
-      <div class="container not-about-grid">
+      <div class="container difference-grid">
 
         <div>
 
@@ -1631,30 +1740,81 @@
           </h2>
 
           <p class="section-intro">
-            It's about making your actual experience easier to understand.
+            It's about making the right evidence visible.
           </p>
 
         </div>
 
 
-        <ul class="not-about-list">
+        <ul class="difference-list">
 
           <li>
             <strong>No generic CV templates.</strong>
-            We work from the role you're actually targeting.
+            <span>We work from the role you're actually targeting.</span>
           </li>
 
           <li>
-            <strong>No memorised interview answers.</strong>
-            We build answers from your real experience.
+            <strong>No invented stories.</strong>
+            <span>We build answers from your real experience.</span>
           </li>
 
           <li>
-            <strong>No pretending to be someone else.</strong>
-            Your experience is the starting point.
+            <strong>No interview scripts.</strong>
+            <span>You learn how to communicate your own work.</span>
           </li>
 
         </ul>
+
+      </div>
+
+    </section>
+
+
+    <!-- INTRO CALL -->
+
+    <section class="intro-call">
+
+      <div class="container">
+
+        <div class="intro-call-box">
+
+          <div>
+
+            <div class="section-label">
+              Have a role in mind?
+            </div>
+
+            <h2>
+              Bring it to the conversation.
+            </h2>
+
+            <p>
+              Book a free 20-minute intro call. Tell me what you're
+              considering, what's currently difficult, and we'll see whether
+              I can help.
+            </p>
+
+            <div class="intro-call-note">
+              You can bring the job description if you already have one.
+            </div>
+
+          </div>
+
+
+          <div>
+
+            <a
+              href="https://calendly.com/d/dtpn-7c6-gkz"
+              class="button button-primary"
+              target="_blank"
+              rel="noopener"
+            >
+              Book a free intro call
+            </a>
+
+          </div>
+
+        </div>
 
       </div>
 
@@ -1689,9 +1849,9 @@
             </summary>
 
             <p>
-              Not as a standalone service. We first understand the role you're
-              targeting and then improve how your experience is presented for
-              that role.
+              Not as a standalone service. We first understand the role
+              you're targeting and then improve how your experience is
+              presented for that role.
             </p>
 
           </details>
@@ -1729,11 +1889,11 @@
           <details>
 
             <summary>
-              Do you only work with Software Developers?
+              Do you only work with Software Engineers?
             </summary>
 
             <p>
-              Software Developers are the main focus of The Career Bridge.
+              Software Engineers are the main focus of The Career Bridge.
               If your background is closely related to software development,
               feel free to get in touch and describe what you're working
               towards.
@@ -1749,9 +1909,9 @@
             </summary>
 
             <p>
-              The Career Bridge is a new service. The initial sessions are
-              offered at a reduced founding price while I refine the service
-              and learn from the people I work with.
+              The Career Bridge is a new service. Founding sessions are
+              offered at a reduced rate while I refine the service and learn
+              from the people I work with.
             </p>
 
           </details>
@@ -1774,13 +1934,12 @@
         </div>
 
         <h2>
-          Looking at a role right now?
+          Have a role in mind?
         </h2>
 
         <p>
-          Good opportunities can move quickly. Book a free 20-minute intro
-          call and tell me what you're working towards, what's currently
-          difficult, and we'll see whether I can help.
+          Bring it to the conversation. Book a free 20-minute intro call and
+          let's look at what you're trying to achieve and whether I can help.
         </p>
 
         <div
@@ -1794,7 +1953,7 @@
             target="_blank"
             rel="noopener"
           >
-            Book a free 20-minute intro call
+            Book a free intro call
           </a>
 
           <a
@@ -1827,7 +1986,7 @@
 
         <br>
 
-        Career & interview support for Software Developers.
+        Career & interview support for Software Engineers.
 
       </div>
 
