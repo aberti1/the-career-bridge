@@ -557,41 +557,47 @@
       font-weight: 500;
     }
 
-    /* AUDIENCE */
+   /* AUDIENCE */
 
     .audience {
       background: var(--surface);
     }
 
-    .audience-copy-wide {
+    .audience-intro {
       max-width: 760px;
-      color: var(--muted);
-      font-size: 18px;
     }
 
-    .audience-copy-wide p + p {
-      margin-top: 22px;
+    .audience-copy {
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 720px;
+    }
+
+    .audience-copy p + p {
+      margin-top: 20px;
     }
 
     .audience-note {
-      margin-top: 45px;
-      padding: 28px 32px;
+      margin-top: 42px;
+      padding: 28px 30px;
       border: 1px solid var(--border);
       border-radius: var(--radius);
       background: var(--bg);
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 35px;
+      align-items: start;
     }
 
     .audience-note strong {
-      display: block;
       font-family: "Playfair Display", serif;
-      font-size: 27px;
+      font-size: 25px;
       font-weight: 500;
-      margin-bottom: 8px;
+      line-height: 1.15;
     }
 
     .audience-note p {
       color: var(--muted);
-      max-width: 760px;
       font-size: 15px;
     }
 
@@ -686,14 +692,15 @@
       color: var(--accent);
     }
 
-    .services-note {
-      margin-top: 22px;
+    .service-price-note {
+      display: block;
       color: var(--muted);
-      font-size: 14px;
+      font-size: 11px;
+      margin-top: 2px;
     }
 
     .services-cta {
-      margin-top: 18px;
+      margin-top: 15px;
     }
 
     /* DIFFERENCE */
@@ -894,6 +901,7 @@
       .approach-intro,
       .example-grid,
       .experience-grid,
+      .audience-main,
       .services-grid,
       .difference-grid {
         grid-template-columns: 1fr;
@@ -938,6 +946,11 @@
 
       .framework-value {
         margin-top: 10px;
+      }
+
+      .early-career {
+        grid-template-columns: 1fr;
+        gap: 20px;
       }
 
       .intro-call-box {
@@ -1022,6 +1035,7 @@
       </a>
 
       <div class="nav-links">
+
         <a href="#approach">Approach</a>
         <a href="#experience">Experience</a>
         <a href="#services">Sessions</a>
@@ -1035,6 +1049,7 @@
         >
           Free intro call
         </a>
+
       </div>
 
     </div>
@@ -1471,19 +1486,20 @@
 
           <p>
             I've hired developers, built teams and designed interview
-            processes around what the organisation actually needed.
+            processes around what the organisation actually needed — including
+            creating new roles and dedicated teams when the existing structure
+            wasn't enough.
           </p>
 
           <p>
-            That included defining new roles, creating dedicated teams and
-            building hiring approaches to assess the skills and experience
-            those teams required.
+            My work also involved performance reviews, feedback and career
+            development, giving me a broader view of how hiring connects to
+            the way teams actually work and grow.
           </p>
 
           <p>
-            I've also worked on performance reviews, feedback and career
-            development — and I've been the candidate, trying to communicate
-            technical work to people who weren't in the room when it happened.
+            I've also been the candidate — trying to communicate technical
+            work to people who weren't in the room when it happened.
           </p>
 
           <div class="experience-highlight">
@@ -1499,7 +1515,7 @@
     </section>
 
 
-    <!-- AUDIENCE -->
+<!-- AUDIENCE -->
 
     <section class="audience">
 
@@ -1512,33 +1528,34 @@
           </div>
 
           <h2>
-            If you're working towards a software engineering role, I can
-            help you make your experience clearer.
+            Software engineers preparing for their next opportunity.
           </h2>
 
-        </div>
+          <div class="audience-intro">
 
+            <div class="audience-copy">
 
-        <div class="audience-copy-wide">
+              <p>
+                You might already have several years of professional
+                experience. Or you might be finishing university, starting
+                your first role, or trying to turn projects and internships
+                into a compelling application.
+              </p>
 
-          <p>
-            I work with people at different stages of their journey — from
-            university students and early-career engineers to experienced
-            software engineers preparing for their next move.
-          </p>
+              <p>
+                In both cases, the question is similar:
+                <strong>what is this role really looking for, and what
+                evidence do I have that shows I can do it?</strong>
+              </p>
 
-          <p>
-            Your evidence will look different depending on where you are.
-            It might come from professional experience, internships,
-            university projects, open-source contributions or personal
-            projects.
-          </p>
+              <p>
+                We'll focus on the specific opportunity in front of you,
+                rather than generic career advice.
+              </p>
 
-          <p>
-            The principle is the same: understand what the role is looking
-            for, find the strongest evidence you already have, and learn how
-            to communicate it clearly.
-          </p>
+            </div>
+
+          </div>
 
         </div>
 
@@ -1546,12 +1563,16 @@
         <div class="audience-note">
 
           <strong>
-            You don't need to have years of experience.
+            We'll work with what you have.
           </strong>
 
           <p>
-            You need something real to work with. We'll start from what
-            you've done and connect it to the role you're trying to reach.
+            Professional experience, university projects, internships,
+            open-source contributions, personal projects or leadership
+            experience can all provide useful evidence. The goal is not to
+            make your background look like someone else's. It's to understand
+            what your experience actually demonstrates and connect it to the
+            role you're targeting.
           </p>
 
         </div>
@@ -1574,7 +1595,7 @@
           </div>
 
           <div class="services-title">
-            Focused support for the role that matters to you.
+            Focused sessions for the role that matters to you.
           </div>
 
           <p class="services-copy">
@@ -1583,14 +1604,11 @@
           </p>
 
           <p class="services-copy">
-            Each session starts from the role you're targeting. We look at
-            what the company is really looking for, connect it to your
-            experience, and work on how to communicate that clearly.
+            Founding clients get the service at a reduced rate in exchange
+            for feedback that helps shape the experience.
           </p>
 
           <p class="founding-note">
-            Founding client rates · Limited availability
-            <br>
             Online · English / Italian
           </p>
 
@@ -1598,6 +1616,8 @@
 
 
         <div class="service-list">
+
+          <!-- SERVICE 1 -->
 
           <article class="service-card">
 
@@ -1608,14 +1628,14 @@
               </h3>
 
               <p>
-                €50 · 60 minutes
+                60 minutes · Your CV + target role
               </p>
 
               <ul class="service-details">
-                <li>Analyse the target role</li>
-                <li>Review your CV against it</li>
+                <li>Understand what the role is really looking for</li>
+                <li>Review your CV against the role</li>
                 <li>Identify your strongest evidence</li>
-                <li>Agree on concrete changes</li>
+                <li>Leave with concrete changes to make</li>
               </ul>
 
             </div>
@@ -1623,7 +1643,7 @@
             <div class="service-price">
 
               <span class="service-price-label">
-                Founding rate
+                Founding price
               </span>
 
               <span class="service-price-value">
@@ -1635,6 +1655,8 @@
           </article>
 
 
+          <!-- SERVICE 2 -->
+
           <article class="service-card">
 
             <div>
@@ -1644,14 +1666,14 @@
               </h3>
 
               <p>
-                €70 · 90 minutes
+                90 minutes · Role analysis + mock interview
               </p>
 
               <ul class="service-details">
-                <li>Understand the role and interview focus</li>
-                <li>Select your strongest examples</li>
-                <li>Practice key questions</li>
-                <li>Mock interview + feedback</li>
+                <li>Understand what the role is assessing</li>
+                <li>Select the strongest examples from your experience</li>
+                <li>Practise with a realistic mock interview</li>
+                <li>Get clear, practical feedback</li>
               </ul>
 
             </div>
@@ -1659,7 +1681,7 @@
             <div class="service-price">
 
               <span class="service-price-label">
-                Founding rate
+                Founding price
               </span>
 
               <span class="service-price-value">
@@ -1671,24 +1693,25 @@
           </article>
 
 
+          <!-- SERVICE 3 -->
+
           <article class="service-card">
 
             <div>
 
               <h3>
-                Role + Interview Preparation
+                Application + Interview
               </h3>
 
               <p>
-                From €110 · Scope depends on what you need
+                Complete preparation · Tailored to your situation
               </p>
 
               <ul class="service-details">
-                <li>Role + CV analysis</li>
-                <li>Application strategy</li>
-                <li>Identify and develop your strongest evidence</li>
-                <li>Interview preparation</li>
-                <li>Mock interview + feedback</li>
+                <li>Understand the target role and what matters most</li>
+                <li>Position your experience for the application</li>
+                <li>Identify and develop your strongest examples</li>
+                <li>Prepare for the interview and practise together</li>
               </ul>
 
             </div>
@@ -1696,22 +1719,20 @@
             <div class="service-price">
 
               <span class="service-price-label">
-                Starting from
+                From
               </span>
 
               <span class="service-price-value">
                 €110
               </span>
 
+              <span class="service-price-note">
+                Depending on what you need
+              </span>
+
             </div>
 
           </article>
-
-
-          <div class="services-note">
-            Not sure which session makes sense?
-            That's exactly what the free intro call is for.
-          </div>
 
 
           <div class="services-cta">
@@ -1892,13 +1913,12 @@
           <details>
 
             <summary>
-              Do I need professional experience?
+              Do you work with people outside Italy?
             </summary>
 
             <p>
-              No. University projects, internships, open-source contributions
-              and personal projects can all provide useful evidence of how
-              you work and what you can do.
+              Yes. Sessions are online and can be conducted in English or
+              Italian.
             </p>
 
           </details>
@@ -1907,12 +1927,14 @@
           <details>
 
             <summary>
-              Do you work with people outside Italy?
+              Do you work with people who are just starting their career?
             </summary>
 
             <p>
-              Yes. Sessions are online and can be conducted in English or
-              Italian.
+              Yes. You don't need a long professional history. University
+              projects, internships, open-source contributions and personal
+              projects can all provide useful evidence of how you work and
+              what you can do.
             </p>
 
           </details>
