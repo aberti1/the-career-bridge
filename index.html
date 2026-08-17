@@ -563,23 +563,14 @@
       background: var(--surface);
     }
 
-    .audience-main {
-      display: grid;
-      grid-template-columns: 0.8fr 1.2fr;
-      gap: 70px;
-      align-items: center;
-    }
-
-    .audience-title {
-      font-family: "Playfair Display", serif;
-      font-size: 42px;
-      line-height: 1.1;
-      letter-spacing: -0.035em;
+    .audience-intro {
+      max-width: 760px;
     }
 
     .audience-copy {
       color: var(--muted);
-      font-size: 17px;
+      font-size: 18px;
+      max-width: 720px;
     }
 
     .audience-copy p + p {
@@ -587,24 +578,27 @@
     }
 
     .audience-note {
-      margin-top: 55px;
-      padding: 35px;
+      margin-top: 42px;
+      padding: 28px 30px;
       border: 1px solid var(--border);
       border-radius: var(--radius);
+      background: var(--bg);
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
+      grid-template-columns: 180px 1fr;
+      gap: 35px;
+      align-items: start;
     }
 
-    .audience-note h3 {
+    .audience-note strong {
       font-family: "Playfair Display", serif;
-      font-size: 31px;
+      font-size: 25px;
       font-weight: 500;
       line-height: 1.15;
     }
 
     .audience-note p {
       color: var(--muted);
+      font-size: 15px;
     }
 
     /* SERVICES */
@@ -651,25 +645,32 @@
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 15px;
-      padding: 27px 28px;
+      padding: 28px;
       display: grid;
       grid-template-columns: 1fr auto;
       gap: 30px;
-      align-items: center;
+      align-items: start;
     }
 
     .service-card h3 {
-      font-size: 19px;
+      font-size: 20px;
       margin-bottom: 5px;
     }
 
-    .service-card p {
+    .service-subtitle {
       color: var(--muted);
       font-size: 13px;
+      margin-bottom: 15px;
+    }
+
+    .service-description {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+      margin-bottom: 13px;
     }
 
     .service-details {
-      margin-top: 14px;
       padding-left: 18px;
       color: var(--muted);
       font-size: 13px;
@@ -677,13 +678,6 @@
 
     .service-details li + li {
       margin-top: 4px;
-    }
-
-    .service-outcome {
-      margin-top: 16px;
-      font-size: 13px;
-      color: var(--accent-dark);
-      font-weight: 500;
     }
 
     .service-price {
@@ -907,7 +901,6 @@
       .approach-intro,
       .example-grid,
       .experience-grid,
-      .audience-main,
       .services-grid,
       .difference-grid {
         grid-template-columns: 1fr;
@@ -956,7 +949,7 @@
 
       .audience-note {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 15px;
       }
 
       .intro-call-box {
@@ -1173,7 +1166,7 @@
         <div class="stat">
           <div class="stat-number">Hiring</div>
           <div class="stat-label">
-            Interviewer, hiring manager & process design experience
+            Interviewer, hiring manager & interview process experience
           </div>
         </div>
 
@@ -1296,9 +1289,7 @@
             </p>
 
             <p>
-              Then we work backwards into your experience — whether that
-              comes from a professional role, university, an internship,
-              personal projects or something else you've built.
+              Then we work backwards into your experience.
             </p>
 
           </div>
@@ -1338,7 +1329,7 @@
 
             <p>
               We identify concrete evidence from your work, studies,
-              projects, internships or leadership experience.
+              projects or leadership experience.
             </p>
 
           </div>
@@ -1445,10 +1436,9 @@
               </div>
 
               <p>
-                What did you actually work on? What problem were you solving?
-                What was your role? What constraints mattered? What decisions
-                did you make? What changed as a result — and why did that
-                matter to the team or the business?
+                What were you actually responsible for? What problem were
+                you solving? What constraints mattered? What decisions did
+                you make? What changed as a result?
               </p>
 
             </div>
@@ -1456,9 +1446,9 @@
           </div>
 
           <p style="margin-top: 22px;">
-            We don't add numbers just to make a bullet sound stronger.
-            We look for the real substance behind the work and decide what
-            is useful for the person reading it.
+            The point isn't to make the sentence sound impressive.
+            It's to understand the work behind it and identify the evidence
+            that shows you can do the job.
           </p>
 
         </div>
@@ -1493,16 +1483,17 @@
           </p>
 
           <p>
-            I've hired developers, built teams and designed hiring processes
-            around what the organisation actually needed — including
-            identifying gaps, creating new roles and building dedicated
-            teams where necessary.
+            I've hired developers, built teams and designed interview
+            processes around what the organisation actually needed —
+            including defining new roles and creating dedicated teams when
+            the existing structure wasn't enough.
           </p>
 
           <p>
-            My work has also included performance reviews, feedback and
-            career development: understanding what people and teams needed
-            and translating that into practical decisions.
+            That work also included performance reviews, feedback and career
+            development, giving me a broader view of how hiring decisions
+            connect to the people and teams an organisation is trying to
+            build.
           </p>
 
           <p>
@@ -1513,8 +1504,7 @@
           <div class="experience-highlight">
             That's the perspective behind The Career Bridge:
             understanding what hiring teams are looking for, then helping
-            candidates recognise and communicate the evidence they already
-            have.
+            candidates make their own evidence easier to recognise.
           </div>
 
         </div>
@@ -1540,33 +1530,29 @@
             Software engineers preparing for their next opportunity.
           </h2>
 
-        </div>
+          <div class="audience-intro">
 
+            <div class="audience-copy">
 
-        <div class="audience-main">
+              <p>
+                You might already have several years of professional
+                experience. Or you might be finishing university, starting
+                your first role, or trying to turn projects and internships
+                into a compelling application.
+              </p>
 
-          <div class="audience-title">
-            Whether you're starting out or already have years of experience,
-            the question is the same:
-            <br><br>
-            <span>What is this role really looking for?</span>
-          </div>
+              <p>
+                In both cases, the question is similar:
+                <strong>what is this role really looking for, and what
+                evidence do I have that shows I can do it?</strong>
+              </p>
 
-          <div class="audience-copy">
+              <p>
+                We'll focus on the specific opportunity in front of you,
+                rather than generic career advice.
+              </p>
 
-            <p>
-              I work with people at different stages of their software
-              engineering journey — from university students and early-career
-              engineers to experienced developers and people moving towards
-              more senior or technical leadership roles.
-            </p>
-
-            <p>
-              The starting point changes depending on where you are.
-              The approach doesn't: we look at the specific opportunity,
-              understand what it requires, and connect it to the evidence
-              you already have.
-            </p>
+            </div>
 
           </div>
 
@@ -1575,18 +1561,17 @@
 
         <div class="audience-note">
 
-          <h3>
-            Your evidence can come from different places.
-          </h3>
+          <strong>
+            We'll work with what you have.
+          </strong>
 
           <p>
-            Professional experience is one source. So are university
-            projects, internships, open-source contributions, personal
-            projects, research or leadership experiences.
-            <br><br>
-            The goal isn't to pretend they're equivalent. It's to understand
-            what each experience demonstrates — and where it is relevant to
-            the role you're targeting.
+            Professional experience, university projects, internships,
+            open-source contributions, personal projects or leadership
+            experience can all provide useful evidence. The goal is not to
+            make your background look like someone else's. It's to understand
+            what your experience actually demonstrates and connect it to the
+            role you're targeting.
           </p>
 
         </div>
@@ -1613,13 +1598,15 @@
           </div>
 
           <p class="services-copy">
-            I'm opening a limited number of founding client spots while I
-            develop The Career Bridge.
+            Each session starts from a real role, application or interview
+            you're working towards.
           </p>
 
           <p class="services-copy">
-            Founding clients get the service at a reduced rate in exchange
-            for feedback that helps shape the experience.
+            I'm opening a limited number of founding client spots while I
+            develop The Career Bridge. Founding clients get the service at a
+            reduced rate in exchange for feedback that helps shape the
+            experience.
           </p>
 
           <p class="founding-note">
@@ -1641,25 +1628,28 @@
                 CV + Role Fit
               </h3>
 
-              <p>
+              <div class="service-subtitle">
                 60 minutes · Your CV + target role
+              </div>
+
+              <p class="service-description">
+                For when you have a role in mind but aren't sure whether your
+                CV is showing the right experience. We'll look at the role
+                first, then identify where your background matches what they
+                need.
               </p>
 
               <ul class="service-details">
-                <li>Understand what the role is really looking for</li>
-                <li>Review your CV against those requirements</li>
-                <li>Identify the strongest evidence in your background</li>
-                <li>Agree on the concrete changes worth making</li>
+                <li>Target role analysis</li>
+                <li>CV review against the role</li>
+                <li>Identify your strongest evidence</li>
+                <li>Concrete changes to make</li>
               </ul>
-
-              <div class="service-outcome">
-                You leave with a clearer picture of what to emphasise and
-                what to change.
-              </div>
 
             </div>
 
             <div class="service-price">
+
               <span class="service-price-label">
                 Founding price
               </span>
@@ -1667,6 +1657,7 @@
               <span class="service-price-value">
                 €50
               </span>
+
             </div>
 
           </article>
@@ -1682,25 +1673,28 @@
                 Interview Prep
               </h3>
 
-              <p>
+              <div class="service-subtitle">
                 90 minutes · Role analysis + mock interview
+              </div>
+
+              <p class="service-description">
+                For when you have an interview coming up and want to prepare
+                around what the company is actually likely to assess. We'll
+                choose the right examples and practise communicating them
+                clearly.
               </p>
 
               <ul class="service-details">
-                <li>Understand what the interview is likely to assess</li>
-                <li>Select the experiences that best demonstrate it</li>
-                <li>Practice with a realistic mock interview</li>
-                <li>Get direct, practical feedback on your answers</li>
+                <li>Understand what the role is assessing</li>
+                <li>Select your strongest examples</li>
+                <li>Mock interview focused on the role</li>
+                <li>Detailed feedback and next steps</li>
               </ul>
-
-              <div class="service-outcome">
-                You leave knowing which examples to use, how to structure
-                them, and where your answers can be stronger.
-              </div>
 
             </div>
 
             <div class="service-price">
+
               <span class="service-price-label">
                 Founding price
               </span>
@@ -1708,6 +1702,7 @@
               <span class="service-price-value">
                 €70
               </span>
+
             </div>
 
           </article>
@@ -1723,25 +1718,29 @@
                 Application + Interview
               </h3>
 
-              <p>
+              <div class="service-subtitle">
                 Complete preparation · From application to interview
+              </div>
+
+              <p class="service-description">
+                For an opportunity you really care about. We connect the
+                whole process: understanding the role, positioning your
+                experience, preparing your application and getting ready for
+                the interview.
               </p>
 
               <ul class="service-details">
-                <li>Analyse the role and your current positioning</li>
-                <li>Review your CV and application strategy</li>
-                <li>Identify the strongest evidence to bring forward</li>
-                <li>Prepare for the interview and run a mock interview</li>
+                <li>Role + CV analysis</li>
+                <li>Application strategy</li>
+                <li>Identify and develop key evidence</li>
+                <li>Interview preparation</li>
+                <li>Mock interview + feedback</li>
               </ul>
-
-              <div class="service-outcome">
-                A complete preparation process built around one specific
-                opportunity.
-              </div>
 
             </div>
 
             <div class="service-price">
+
               <span class="service-price-label">
                 Founding price
               </span>
@@ -1749,6 +1748,7 @@
               <span class="service-price-value">
                 €110
               </span>
+
             </div>
 
           </article>
@@ -1802,17 +1802,23 @@
 
           <li>
             <strong>No generic CV templates.</strong>
-            <span>We work from the role you're actually targeting.</span>
+            <span>
+              We work from the role you're actually targeting.
+            </span>
           </li>
 
           <li>
             <strong>No invented stories.</strong>
-            <span>We build answers from your real experience.</span>
+            <span>
+              We build answers from your real experience.
+            </span>
           </li>
 
           <li>
             <strong>No interview scripts.</strong>
-            <span>You learn how to communicate your own work.</span>
+            <span>
+              You learn how to communicate your own work.
+            </span>
           </li>
 
         </ul>
@@ -1912,22 +1918,6 @@
           <details>
 
             <summary>
-              I don't have much professional experience yet. Can you still help?
-            </summary>
-
-            <p>
-              Yes. University projects, internships, open-source
-              contributions and personal projects can all provide useful
-              evidence. We'll focus on what those experiences actually
-              demonstrate and where that evidence is relevant to the role.
-            </p>
-
-          </details>
-
-
-          <details>
-
-            <summary>
               Do I need to have an interview scheduled?
             </summary>
 
@@ -1957,14 +1947,14 @@
           <details>
 
             <summary>
-              Do you only work with Software Engineers?
+              Do you only work with experienced Software Engineers?
             </summary>
 
             <p>
-              Software Engineers are the main focus of The Career Bridge.
-              If your background is closely related to software development,
-              feel free to get in touch and describe what you're working
-              towards.
+              No. I work with both experienced engineers and people earlier
+              in their career, including students and recent graduates.
+              The approach is the same: understand what the role is looking
+              for, then identify the strongest evidence in your background.
             </p>
 
           </details>
