@@ -472,6 +472,10 @@
       letter-spacing: -0.035em;
     }
 
+    .example-title span {
+      color: var(--accent);
+    }
+
     .example-copy {
       color: var(--muted);
       font-size: 17px;
@@ -582,7 +586,7 @@
       margin-top: 20px;
     }
 
-    .early-career {
+    .audience-note {
       margin-top: 55px;
       padding: 35px;
       border: 1px solid var(--border);
@@ -592,14 +596,14 @@
       gap: 50px;
     }
 
-    .early-career h3 {
+    .audience-note h3 {
       font-family: "Playfair Display", serif;
       font-size: 31px;
       font-weight: 500;
       line-height: 1.15;
     }
 
-    .early-career p {
+    .audience-note p {
       color: var(--muted);
     }
 
@@ -647,7 +651,7 @@
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 15px;
-      padding: 25px 28px;
+      padding: 27px 28px;
       display: grid;
       grid-template-columns: 1fr auto;
       gap: 30px;
@@ -665,14 +669,21 @@
     }
 
     .service-details {
-      margin-top: 13px;
+      margin-top: 14px;
       padding-left: 18px;
       color: var(--muted);
       font-size: 13px;
     }
 
     .service-details li + li {
-      margin-top: 3px;
+      margin-top: 4px;
+    }
+
+    .service-outcome {
+      margin-top: 16px;
+      font-size: 13px;
+      color: var(--accent-dark);
+      font-weight: 500;
     }
 
     .service-price {
@@ -943,7 +954,7 @@
         margin-top: 10px;
       }
 
-      .early-career {
+      .audience-note {
         grid-template-columns: 1fr;
         gap: 20px;
       }
@@ -1162,7 +1173,7 @@
         <div class="stat">
           <div class="stat-number">Hiring</div>
           <div class="stat-label">
-            Interviewer & hiring manager experience
+            Interviewer, hiring manager & process design experience
           </div>
         </div>
 
@@ -1285,7 +1296,9 @@
             </p>
 
             <p>
-              Then we work backwards into your experience.
+              Then we work backwards into your experience — whether that
+              comes from a professional role, university, an internship,
+              personal projects or something else you've built.
             </p>
 
           </div>
@@ -1325,7 +1338,7 @@
 
             <p>
               We identify concrete evidence from your work, studies,
-              projects or leadership experience.
+              projects, internships or leadership experience.
             </p>
 
           </div>
@@ -1432,8 +1445,10 @@
               </div>
 
               <p>
-                What did you actually design? What constraint did you face?
-                What decision did you make? What changed as a result?
+                What did you actually work on? What problem were you solving?
+                What was your role? What constraints mattered? What decisions
+                did you make? What changed as a result — and why did that
+                matter to the team or the business?
               </p>
 
             </div>
@@ -1441,8 +1456,9 @@
           </div>
 
           <p style="margin-top: 22px;">
-            The point isn't to make the sentence sound impressive.
-            It's to find the evidence that shows you can actually do the job.
+            We don't add numbers just to make a bullet sound stronger.
+            We look for the real substance behind the work and decide what
+            is useful for the person reading it.
           </p>
 
         </div>
@@ -1477,8 +1493,16 @@
           </p>
 
           <p>
-            I've hired developers, built teams and worked on hiring
-            processes, performance reviews, feedback and career development.
+            I've hired developers, built teams and designed hiring processes
+            around what the organisation actually needed — including
+            identifying gaps, creating new roles and building dedicated
+            teams where necessary.
+          </p>
+
+          <p>
+            My work has also included performance reviews, feedback and
+            career development: understanding what people and teams needed
+            and translating that into practical decisions.
           </p>
 
           <p>
@@ -1489,7 +1513,8 @@
           <div class="experience-highlight">
             That's the perspective behind The Career Bridge:
             understanding what hiring teams are looking for, then helping
-            candidates make their own evidence easier to recognise.
+            candidates recognise and communicate the evidence they already
+            have.
           </div>
 
         </div>
@@ -1512,7 +1537,7 @@
           </div>
 
           <h2>
-            Software engineers preparing for their next role.
+            Software engineers preparing for their next opportunity.
           </h2>
 
         </div>
@@ -1521,22 +1546,26 @@
         <div class="audience-main">
 
           <div class="audience-title">
-            Make your next move with a clearer picture of what you're
-            actually being hired to do.
+            Whether you're starting out or already have years of experience,
+            the question is the same:
+            <br><br>
+            <span>What is this role really looking for?</span>
           </div>
 
           <div class="audience-copy">
 
             <p>
-              Most of my work is with software engineers who already have
-              professional experience and are preparing for their next move
-              — a new company, a more senior role, or a move towards
-              technical leadership.
+              I work with people at different stages of their software
+              engineering journey — from university students and early-career
+              engineers to experienced developers and people moving towards
+              more senior or technical leadership roles.
             </p>
 
             <p>
-              We'll focus on the specific role and challenge in front of
-              you, rather than generic career advice.
+              The starting point changes depending on where you are.
+              The approach doesn't: we look at the specific opportunity,
+              understand what it requires, and connect it to the evidence
+              you already have.
             </p>
 
           </div>
@@ -1544,19 +1573,20 @@
         </div>
 
 
-        <div class="early-career">
+        <div class="audience-note">
 
           <h3>
-            Early in your career?
+            Your evidence can come from different places.
           </h3>
 
           <p>
-            I can help with that too.
-            University projects, internships, open-source contributions and
-            personal projects can all provide evidence of how you work and
-            what you can do.
+            Professional experience is one source. So are university
+            projects, internships, open-source contributions, personal
+            projects, research or leadership experiences.
             <br><br>
-            We'll work with what you have.
+            The goal isn't to pretend they're equivalent. It's to understand
+            what each experience demonstrates — and where it is relevant to
+            the role you're targeting.
           </p>
 
         </div>
@@ -1579,7 +1609,7 @@
           </div>
 
           <div class="services-title">
-            Focused sessions for the role that matters to you.
+            Focused sessions for the opportunity that matters to you.
           </div>
 
           <p class="services-copy">
@@ -1601,6 +1631,8 @@
 
         <div class="service-list">
 
+          <!-- SERVICE 1 -->
+
           <article class="service-card">
 
             <div>
@@ -1614,11 +1646,16 @@
               </p>
 
               <ul class="service-details">
-                <li>Target role analysis</li>
-                <li>CV review</li>
-                <li>Identify your strongest evidence</li>
-                <li>Concrete changes to make</li>
+                <li>Understand what the role is really looking for</li>
+                <li>Review your CV against those requirements</li>
+                <li>Identify the strongest evidence in your background</li>
+                <li>Agree on the concrete changes worth making</li>
               </ul>
+
+              <div class="service-outcome">
+                You leave with a clearer picture of what to emphasise and
+                what to change.
+              </div>
 
             </div>
 
@@ -1635,6 +1672,8 @@
           </article>
 
 
+          <!-- SERVICE 2 -->
+
           <article class="service-card">
 
             <div>
@@ -1648,11 +1687,16 @@
               </p>
 
               <ul class="service-details">
-                <li>Understand what the role is assessing</li>
-                <li>Select your strongest examples</li>
-                <li>Mock interview</li>
-                <li>Detailed feedback</li>
+                <li>Understand what the interview is likely to assess</li>
+                <li>Select the experiences that best demonstrate it</li>
+                <li>Practice with a realistic mock interview</li>
+                <li>Get direct, practical feedback on your answers</li>
               </ul>
+
+              <div class="service-outcome">
+                You leave knowing which examples to use, how to structure
+                them, and where your answers can be stronger.
+              </div>
 
             </div>
 
@@ -1669,6 +1713,8 @@
           </article>
 
 
+          <!-- SERVICE 3 -->
+
           <article class="service-card">
 
             <div>
@@ -1678,15 +1724,20 @@
               </h3>
 
               <p>
-                Complete preparation
+                Complete preparation · From application to interview
               </p>
 
               <ul class="service-details">
-                <li>Role + CV analysis</li>
-                <li>Application strategy</li>
-                <li>Interview preparation</li>
-                <li>Mock interview + feedback</li>
+                <li>Analyse the role and your current positioning</li>
+                <li>Review your CV and application strategy</li>
+                <li>Identify the strongest evidence to bring forward</li>
+                <li>Prepare for the interview and run a mock interview</li>
               </ul>
+
+              <div class="service-outcome">
+                A complete preparation process built around one specific
+                opportunity.
+              </div>
 
             </div>
 
@@ -1740,7 +1791,8 @@
           </h2>
 
           <p class="section-intro">
-            It's about making the right evidence visible.
+            It's about understanding what matters and making the right
+            evidence visible.
           </p>
 
         </div>
@@ -1852,6 +1904,22 @@
               Not as a standalone service. We first understand the role
               you're targeting and then improve how your experience is
               presented for that role.
+            </p>
+
+          </details>
+
+
+          <details>
+
+            <summary>
+              I don't have much professional experience yet. Can you still help?
+            </summary>
+
+            <p>
+              Yes. University projects, internships, open-source
+              contributions and personal projects can all provide useful
+              evidence. We'll focus on what those experiences actually
+              demonstrate and where that evidence is relevant to the role.
             </p>
 
           </details>
