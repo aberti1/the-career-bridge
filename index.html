@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>The Career Bridge — Career & Interview Support</title>
+  <title>The Career Bridge — Tech Career & Interview Support</title>
 
   <meta
     name="description"
-    content="Practical CV and interview support for people starting or building their careers in tech."
+    content="Practical CV, application and interview support for people starting or building their careers in tech."
   >
 
   <style>
@@ -108,22 +108,22 @@
     }
 
     h1 {
-      max-width: 760px;
+      max-width: 800px;
 
       margin: 20px 0;
 
       font-size: clamp(
-        48px,
+        46px,
         7vw,
-        72px
+        70px
       );
 
-      line-height: 1;
+      line-height: 1.02;
       letter-spacing: -0.06em;
     }
 
     h2 {
-      max-width: 700px;
+      max-width: 720px;
 
       margin: 10px 0 20px;
 
@@ -141,7 +141,7 @@
       margin: 0 0 10px;
 
       font-size: 20px;
-      line-height: 1.25;
+      line-height: 1.3;
     }
 
     p {
@@ -159,7 +159,7 @@
     }
 
     .lead {
-      max-width: 690px;
+      max-width: 720px;
 
       color: #444e55;
 
@@ -168,7 +168,7 @@
     }
 
     .intro {
-      max-width: 680px;
+      max-width: 690px;
 
       color: var(--muted);
 
@@ -209,13 +209,12 @@
     ========================= */
 
     .hero {
-      padding: 105px 0 90px;
+      padding: 105px 0 75px;
       border-top: none;
     }
 
     .hero-actions {
       display: flex;
-
       align-items: center;
 
       gap: 20px;
@@ -226,6 +225,41 @@
     .hero-note {
       color: var(--muted);
       font-size: 13px;
+    }
+
+    /* =========================
+       CREDIBILITY BAR
+    ========================= */
+
+    .credibility {
+      padding: 28px 0;
+
+      background: var(--soft);
+
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .credibility-list {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 10px 28px;
+
+      color: #4e575d;
+
+      font-size: 14px;
+    }
+
+    .credibility-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .credibility-item strong {
+      color: var(--text);
     }
 
     /* =========================
@@ -262,6 +296,26 @@
        APPROACH
     ========================= */
 
+    .approach-intro {
+      max-width: 700px;
+
+      margin-top: 20px;
+    }
+
+    .approach-highlight {
+      margin-top: 35px;
+
+      padding: 25px 28px;
+
+      background: var(--soft);
+
+      border-radius: 8px;
+
+      font-size: 21px;
+      line-height: 1.45;
+      letter-spacing: -0.02em;
+    }
+
     .approach-list {
       margin-top: 40px;
 
@@ -292,6 +346,7 @@
 
     .approach-item p {
       max-width: 650px;
+
       color: var(--muted);
     }
 
@@ -348,47 +403,6 @@
     }
 
     /* =========================
-       SERVICES
-    ========================= */
-
-    .service-card {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .service-card .price {
-      margin: 15px 0;
-
-      font-size: 27px;
-      font-weight: 700;
-    }
-
-    .service-card ul {
-      margin: 5px 0 25px;
-
-      padding-left: 18px;
-
-      color: var(--muted);
-    }
-
-    .service-card li {
-      margin: 7px 0;
-    }
-
-    .service-card .button {
-      margin-top: auto;
-      align-self: flex-start;
-    }
-
-    .price-note {
-      margin-top: 18px;
-
-      color: var(--muted);
-
-      font-size: 13px;
-    }
-
-    /* =========================
        WHO IT'S FOR
     ========================= */
 
@@ -415,6 +429,52 @@
       color: #4e575d;
 
       font-size: 14px;
+    }
+
+    .early-career {
+      max-width: 720px;
+
+      margin-top: 35px;
+
+      padding-top: 30px;
+
+      border-top:
+        1px solid var(--border);
+    }
+
+    /* =========================
+       SERVICES
+    ========================= */
+
+    .service-card {
+      display: flex;
+
+      flex-direction: column;
+    }
+
+    .service-card .price {
+      margin: 15px 0;
+
+      font-size: 27px;
+      font-weight: 700;
+    }
+
+    .service-card ul {
+      margin: 5px 0 25px;
+
+      padding-left: 18px;
+
+      color: var(--muted);
+    }
+
+    .service-card li {
+      margin: 7px 0;
+    }
+
+    .service-card .button {
+      margin-top: auto;
+
+      align-self: flex-start;
     }
 
     /* =========================
@@ -512,6 +572,13 @@
 
       .approach-item {
         grid-template-columns: 1fr;
+
+        gap: 8px;
+      }
+
+      .credibility-list {
+        flex-direction: column;
+
         gap: 8px;
       }
 
@@ -562,7 +629,7 @@
           </a>
 
           <a href="#services">
-            Services
+            Sessions
           </a>
 
           <a href="#about">
@@ -600,18 +667,15 @@
 
 
         <h1>
-          Get better at showing what you can do.
+          Make your experience work for the role you're applying for.
         </h1>
 
 
         <p class="lead">
 
-          Looking for a new role can be surprisingly difficult,
-          even when you're good at what you do.
-
-          I help you work out what to highlight from your experience,
-          connect it to the role you're applying for, and prepare
-          for the conversations that come next.
+          I help people in tech identify the experience that matters
+          for the role they want, communicate it clearly on their CV,
+          and prepare for the interview.
 
         </p>
 
@@ -622,7 +686,7 @@
             href="#contact"
             class="button"
           >
-            Book a free 15-min intro
+            Start a conversation
           </a>
 
 
@@ -635,6 +699,80 @@
       </div>
 
     </section>
+
+
+
+    <!-- =========================
+         CREDIBILITY
+    ========================= -->
+
+    <div class="credibility">
+
+      <div class="container">
+
+        <div class="credibility-list">
+
+
+          <div class="credibility-item">
+
+            <strong>
+              15+
+            </strong>
+
+            years in tech
+
+          </div>
+
+
+          <div class="credibility-item">
+
+            <strong>
+              200+
+            </strong>
+
+            interviews
+
+          </div>
+
+
+          <div class="credibility-item">
+
+            <strong>
+              Hiring manager
+            </strong>
+
+            experience
+
+          </div>
+
+
+          <div class="credibility-item">
+
+            <strong>
+              Amazon
+            </strong>
+
+            experience
+
+          </div>
+
+
+          <div class="credibility-item">
+
+            <strong>
+              Software Engineering & SRE
+            </strong>
+
+            hiring processes
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
 
 
 
@@ -652,18 +790,15 @@
 
 
         <h2>
-          Sometimes you don't need more experience.
-          You need to explain the experience you already have.
+          Your experience is probably more relevant than you think.
         </h2>
 
 
         <p class="intro">
 
-          A CV has limited space. An interview has limited time.
-
-          The challenge is often figuring out which parts of your
-          experience matter for a particular role, and how to talk
-          about them without sounding rehearsed.
+          The difficult part is often working out which parts matter
+          for a particular role, and making them easy for a hiring
+          team to see.
 
         </p>
 
@@ -674,14 +809,14 @@
           <div class="card">
 
             <h3>
-              Your CV isn't getting enough traction
+              Your CV doesn't quite show what you can do
             </h3>
 
             <p>
 
-              We look at the role you're targeting and work out
-              whether your CV is making the relevant parts of
-              your experience easy to find.
+              We look at the role you're targeting and identify
+              where your CV could do a better job of connecting
+              your experience to what the company needs.
 
             </p>
 
@@ -697,9 +832,9 @@
 
             <p>
 
-              We break down what the company is likely trying
-              to assess and practise how you can demonstrate
-              it using your own experience.
+              We look at what the company is likely trying to assess
+              and practise how you can demonstrate it using your
+              own experience.
 
             </p>
 
@@ -710,16 +845,17 @@
           <div class="card">
 
             <h3>
-              You're starting out
+              You're early in your career
             </h3>
 
             <p>
 
-              You don't need a long employment history to have
-              examples worth talking about.
+              You don't need years of employment history to have
+              good examples.
 
-              Projects, university work, internships, open source
-              and personal projects can all be useful.
+              University projects, internships, open source and
+              personal projects can all tell an interviewer
+              something about how you work.
 
             </p>
 
@@ -748,19 +884,27 @@
 
 
         <h2>
-          We start with the role, not with a generic checklist.
+          I don't start with a CV template. I start with the role.
         </h2>
 
 
-        <p class="intro">
+        <p class="intro approach-intro">
 
           Every role is different.
 
-          Rather than giving you a standard list of interview
-          answers or CV templates, we look at the specific
-          opportunity you're interested in.
+          My approach comes from having worked on the hiring side:
+          understanding what a team needs, defining what to look for,
+          and then assessing candidates against it.
 
         </p>
+
+
+        <div class="approach-highlight">
+
+          The goal is to connect what the company is looking for
+          with evidence from your own experience.
+
+        </div>
 
 
         <div class="approach-list">
@@ -874,7 +1018,7 @@
 
 
             <h2>
-              I've spent most of my career on both sides of the hiring process.
+              I've spent a large part of my career interviewing and hiring people in tech.
             </h2>
 
 
@@ -909,9 +1053,8 @@
             <p>
 
               That experience gives me a practical understanding
-              of both sides of the hiring process: what candidates
-              experience, and what hiring teams are actually
-              trying to assess.
+              of what hiring teams are looking for and how candidates
+              can communicate their experience more effectively.
 
             </p>
 
@@ -988,6 +1131,80 @@
 
 
     <!-- =========================
+         WHO IT'S FOR
+    ========================= -->
+
+    <section>
+
+      <div class="container">
+
+        <div class="eyebrow">
+          Who I work with
+        </div>
+
+
+        <h2>
+          People starting or building a career in tech.
+        </h2>
+
+
+        <p class="intro">
+
+          I'm starting with the areas where I have the most
+          direct experience and can offer the most useful advice.
+
+        </p>
+
+
+        <div class="roles">
+
+
+          <div class="role">
+            Software Engineering
+          </div>
+
+
+          <div class="role">
+            Engineering Management
+          </div>
+
+
+          <div class="role">
+            Tech Leadership
+          </div>
+
+
+        </div>
+
+
+        <div class="early-career">
+
+          <h3>
+            Just starting out?
+          </h3>
+
+
+          <p class="intro">
+
+            You don't need a long employment history to have
+            something worth talking about.
+
+            We can work with university projects, internships,
+            open-source contributions, personal projects and
+            other experiences to find useful examples for
+            applications and interviews.
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
          SERVICES
     ========================= -->
 
@@ -1007,10 +1224,8 @@
 
         <p class="intro">
 
-          These are intentionally simple to start with.
-
-          If you need something more specific, we can discuss
-          it during the initial conversation.
+          Simple, focused sessions around the part of the
+          hiring process you're working on.
 
         </p>
 
@@ -1023,14 +1238,14 @@
           <div class="card service-card">
 
             <h3>
-              CV & Positioning
+              CV & Role Fit
             </h3>
 
 
             <p>
 
-              For when you're applying for roles but aren't
-              getting the response you'd expect.
+              For when you're applying for roles but your CV
+              isn't showing the right parts of your experience.
 
             </p>
 
@@ -1069,7 +1284,7 @@
               href="#contact"
               class="button"
             >
-              Get in touch
+              Start a conversation
             </a>
 
           </div>
@@ -1081,7 +1296,7 @@
           <div class="card service-card">
 
             <h3>
-              Interview Preparation
+              Interview Prep
             </h3>
 
 
@@ -1128,7 +1343,7 @@
               href="#contact"
               class="button"
             >
-              Get in touch
+              Start a conversation
             </a>
 
           </div>
@@ -1140,14 +1355,14 @@
           <div class="card service-card">
 
             <h3>
-              CV + Interview
+              Application + Interview
             </h3>
 
 
             <p>
 
-              For when you want to work on both the
-              application and interview stages.
+              For when you want to work on both the application
+              and interview stages.
 
             </p>
 
@@ -1160,7 +1375,7 @@
             <ul>
 
               <li>
-                CV & positioning session
+                CV & role-fit session
               </li>
 
               <li>
@@ -1186,83 +1401,9 @@
               href="#contact"
               class="button"
             >
-              Get in touch
+              Start a conversation
             </a>
 
-          </div>
-
-
-        </div>
-
-
-        <p class="price-note">
-
-          Introductory prices while I'm testing the service
-          as a side business.
-
-        </p>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         WHO IT'S FOR
-    ========================= -->
-
-    <section>
-
-      <div class="container">
-
-        <div class="eyebrow">
-          Who I currently work with
-        </div>
-
-
-        <h2>
-          People starting or building a career in tech.
-        </h2>
-
-
-        <p class="intro">
-
-          This is currently focused on technology roles,
-          where I have the most direct experience.
-
-          That includes people applying for their first role
-          as well as experienced professionals looking for
-          their next move.
-
-        </p>
-
-
-        <p class="intro">
-
-          For people early in their career, we can work with
-          university projects, internships, open-source work,
-          personal projects and other experiences to find
-          useful examples for applications and interviews.
-
-        </p>
-
-
-        <div class="roles">
-
-
-          <div class="role">
-            Software Engineering
-          </div>
-
-
-          <div class="role">
-            Engineering Management
-          </div>
-
-
-          <div class="role">
-            Tech Leadership
           </div>
 
 
@@ -1306,9 +1447,9 @@
 
               For now, yes.
 
-              I'm starting with the areas where I have
-              the most direct experience: Software Engineering,
-              Engineering Management and Tech Leadership.
+              I'm starting with Software Engineering,
+              Engineering Management and Tech Leadership,
+              where I have the most direct experience.
 
             </div>
 
@@ -1397,22 +1538,28 @@
         <div class="contact-box">
 
           <div class="eyebrow">
-            Get in touch
+            Start a conversation
           </div>
 
 
           <h2>
-            Not sure what you need?
+            Tell me what you're working on.
           </h2>
 
 
           <p>
 
-            Send me a short description of what you're working
-            towards and where you're currently stuck.
+            Send me a short description of the role you're targeting,
+            where you are in the process, and where you're currently
+            stuck.
 
-            We can have a quick 15-minute conversation and
-            work out whether a session makes sense.
+          </p>
+
+
+          <p>
+
+            We can have a quick 15-minute conversation and work out
+            whether a session makes sense.
 
           </p>
 
