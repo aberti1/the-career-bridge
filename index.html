@@ -62,9 +62,7 @@
       margin: 0 auto;
     }
 
-    /* =========================
-       NAV
-    ========================= */
+    /* NAV */
 
     nav {
       height: 82px;
@@ -116,13 +114,45 @@
       font-weight: 600;
     }
 
-    .nav-cta:hover {
-      background: var(--accent-dark) !important;
+    /* BUTTONS */
+
+    .button-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
     }
 
-    /* =========================
-       HERO
-    ========================= */
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+      transition: 0.2s ease;
+    }
+
+    .button-primary {
+      background: var(--accent);
+      color: white;
+    }
+
+    .button-primary:hover {
+      background: var(--accent-dark);
+      transform: translateY(-1px);
+    }
+
+    .button-secondary {
+      border: 1px solid var(--border);
+      background: transparent;
+    }
+
+    .button-secondary:hover {
+      background: white;
+    }
+
+    /* HERO */
 
     .hero {
       padding: 110px 0 90px;
@@ -164,7 +194,6 @@
       line-height: 1.03;
       letter-spacing: -0.045em;
       font-weight: 500;
-      max-width: 800px;
       margin-bottom: 28px;
     }
 
@@ -174,42 +203,6 @@
       color: var(--muted);
       max-width: 680px;
       margin-bottom: 34px;
-    }
-
-    .button-row {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 14px 22px;
-      border-radius: 999px;
-      font-size: 14px;
-      font-weight: 600;
-      transition: 0.2s ease;
-    }
-
-    .button-primary {
-      background: var(--accent);
-      color: white;
-    }
-
-    .button-primary:hover {
-      background: var(--accent-dark);
-      transform: translateY(-1px);
-    }
-
-    .button-secondary {
-      border: 1px solid var(--border);
-      background: transparent;
-    }
-
-    .button-secondary:hover {
-      background: white;
     }
 
     .hero-card {
@@ -241,9 +234,7 @@
       color: var(--muted);
     }
 
-    /* =========================
-       STATS
-    ========================= */
+    /* STATS */
 
     .stats {
       border-top: 1px solid var(--border);
@@ -281,9 +272,7 @@
       font-size: 13px;
     }
 
-    /* =========================
-       GENERAL SECTIONS
-    ========================= */
+    /* SECTIONS */
 
     section {
       padding: 110px 0;
@@ -313,9 +302,7 @@
       max-width: 650px;
     }
 
-    /* =========================
-       PROBLEM
-    ========================= */
+    /* PROBLEMS */
 
     .problems {
       background: var(--surface);
@@ -333,28 +320,28 @@
       padding: 32px;
     }
 
-    .problem-number {
+    .problem-number,
+    .work-number {
       color: var(--accent);
       font-size: 13px;
       font-weight: 700;
-      margin-bottom: 55px;
+      margin-bottom: 45px;
     }
 
-    .problem-card h3 {
-      font-size: 20px;
+    .problem-card h3,
+    .work-card h3 {
+      font-size: 21px;
       line-height: 1.25;
       margin-bottom: 14px;
-      letter-spacing: -0.02em;
     }
 
-    .problem-card p {
+    .problem-card p,
+    .work-card p {
       color: var(--muted);
       font-size: 15px;
     }
 
-    /* =========================
-       APPROACH
-    ========================= */
+    /* APPROACH */
 
     .approach {
       background: var(--cream);
@@ -428,9 +415,7 @@
       letter-spacing: -0.03em;
     }
 
-    /* =========================
-       EXPERIENCE
-    ========================= */
+    /* EXPERIENCE */
 
     .experience-grid {
       display: grid;
@@ -464,9 +449,7 @@
       font-weight: 500;
     }
 
-    /* =========================
-       WHO I HELP
-    ========================= */
+    /* AUDIENCE */
 
     .audience {
       background: var(--surface);
@@ -516,9 +499,7 @@
       color: var(--muted);
     }
 
-    /* =========================
-       WHAT WE'LL WORK ON
-    ========================= */
+    /* WORK */
 
     .work-on {
       background: var(--bg);
@@ -537,26 +518,34 @@
       padding: 35px;
     }
 
-    .work-number {
-      color: var(--accent);
-      font-size: 13px;
-      font-weight: 700;
-      margin-bottom: 45px;
+    /* INTRO CALL */
+
+    .intro-call {
+      background: var(--surface);
     }
 
-    .work-card h3 {
-      font-size: 23px;
+    .intro-call-box {
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 55px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 50px;
+      background: var(--bg);
+    }
+
+    .intro-call-box h2 {
       margin-bottom: 14px;
     }
 
-    .work-card p {
+    .intro-call-box p {
       color: var(--muted);
-      font-size: 15px;
+      font-size: 17px;
+      max-width: 680px;
     }
 
-    /* =========================
-       FOUNDING SESSIONS
-    ========================= */
+    /* FOUNDING */
 
     .founding {
       background: var(--cream);
@@ -636,9 +625,7 @@
       color: var(--accent);
     }
 
-    /* =========================
-       DIFFERENTIATOR
-    ========================= */
+    /* DIFFERENCE */
 
     .not-about {
       background: var(--surface);
@@ -665,13 +652,7 @@
       border-bottom: 1px solid var(--border);
     }
 
-    .not-about-list strong {
-      font-weight: 600;
-    }
-
-    /* =========================
-       FAQ
-    ========================= */
+    /* FAQ */
 
     .faq {
       background: var(--bg);
@@ -722,9 +703,7 @@
       font-size: 15px;
     }
 
-    /* =========================
-       FINAL CTA
-    ========================= */
+    /* CTA */
 
     .final-cta {
       background: var(--accent);
@@ -754,22 +733,12 @@
       color: var(--accent);
     }
 
-    .final-cta .button-primary:hover {
-      background: #f0f0ed;
-    }
-
     .final-cta .button-secondary {
       border-color: rgba(255,255,255,0.3);
       color: white;
     }
 
-    .final-cta .button-secondary:hover {
-      background: rgba(255,255,255,0.08);
-    }
-
-    /* =========================
-       FOOTER
-    ========================= */
+    /* FOOTER */
 
     footer {
       background: var(--accent-dark);
@@ -794,13 +763,7 @@
       gap: 24px;
     }
 
-    .footer-links a:hover {
-      color: white;
-    }
-
-    /* =========================
-       MOBILE
-    ========================= */
+    /* MOBILE */
 
     @media (max-width: 900px) {
 
@@ -820,10 +783,6 @@
       .not-about-grid {
         grid-template-columns: 1fr;
         gap: 45px;
-      }
-
-      .hero-card {
-        max-width: 600px;
       }
 
       .stats-grid {
@@ -862,6 +821,12 @@
       .early-career {
         grid-template-columns: 1fr;
         gap: 20px;
+      }
+
+      .intro-call-box {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 35px;
       }
 
       section {
@@ -931,9 +896,7 @@
 
 <body>
 
-  <!-- =========================
-       NAVIGATION
-  ========================= -->
+  <!-- NAV -->
 
   <nav>
     <div class="nav-inner">
@@ -947,7 +910,15 @@
         <a href="#experience">Experience</a>
         <a href="#services">Sessions</a>
         <a href="#faq">FAQ</a>
-        <a href="#contact" class="nav-cta">Let's talk</a>
+
+        <a
+          href="IL-TUO-LINK-CALENDLY"
+          class="nav-cta"
+          target="_blank"
+          rel="noopener"
+        >
+          Free intro call
+        </a>
       </div>
 
     </div>
@@ -956,9 +927,7 @@
 
   <main>
 
-    <!-- =========================
-         HERO
-    ========================= -->
+    <!-- HERO -->
 
     <section class="hero">
 
@@ -982,12 +951,20 @@
 
           <div class="button-row">
 
-            <a href="#services" class="button button-primary">
-              Explore sessions
+            <a
+              href="IL-TUO-LINK-CALENDLY"
+              class="button button-primary"
+              target="_blank"
+              rel="noopener"
+            >
+              Book a free intro call
             </a>
 
-            <a href="#approach" class="button button-secondary">
-              How I work
+            <a
+              href="#services"
+              class="button button-secondary"
+            >
+              Explore sessions
             </a>
 
           </div>
@@ -1017,9 +994,7 @@
     </section>
 
 
-    <!-- =========================
-         CREDIBILITY
-    ========================= -->
+    <!-- STATS -->
 
     <div class="stats">
 
@@ -1054,9 +1029,7 @@
     </div>
 
 
-    <!-- =========================
-         PROBLEM
-    ========================= -->
+    <!-- PROBLEMS -->
 
     <section class="problems">
 
@@ -1137,9 +1110,7 @@
     </section>
 
 
-    <!-- =========================
-         APPROACH
-    ========================= -->
+    <!-- APPROACH -->
 
     <section class="approach" id="approach">
 
@@ -1240,9 +1211,7 @@
     </section>
 
 
-    <!-- =========================
-         EXPERIENCE
-    ========================= -->
+    <!-- EXPERIENCE -->
 
     <section id="experience">
 
@@ -1282,9 +1251,7 @@
     </section>
 
 
-    <!-- =========================
-         WHO I HELP
-    ========================= -->
+    <!-- AUDIENCE -->
 
     <section class="audience">
 
@@ -1351,9 +1318,7 @@
     </section>
 
 
-    <!-- =========================
-         WHAT WE'LL WORK ON
-    ========================= -->
+    <!-- WORK -->
 
     <section class="work-on">
 
@@ -1439,9 +1404,54 @@
     </section>
 
 
-    <!-- =========================
-         FOUNDING SESSIONS
-    ========================= -->
+    <!-- FREE INTRO CALL -->
+
+    <section class="intro-call">
+
+      <div class="container">
+
+        <div class="intro-call-box">
+
+          <div>
+
+            <div class="section-label">
+              Not sure yet?
+            </div>
+
+            <h2>
+              Start with a conversation.
+            </h2>
+
+            <p>
+              Book a free 20-minute intro call. Tell me what you're working
+              towards, what's currently difficult, and we'll see whether
+              I can help.
+            </p>
+
+          </div>
+
+
+          <div>
+
+            <a
+              href="https://calendly.com/annalisa-berti/30min"
+              class="button button-primary"
+              target="_blank"
+              rel="noopener"
+            >
+              Book a free intro call
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FOUNDING SESSIONS -->
 
     <section class="founding" id="services">
 
@@ -1475,7 +1485,6 @@
 
 
         <div class="founding-services">
-
 
           <article class="founding-card">
 
@@ -1555,10 +1564,12 @@
           <div style="margin-top: 15px;">
 
             <a
-              href="#contact"
+              href="IL-TUO-LINK-CALENDLY"
               class="button button-primary"
+              target="_blank"
+              rel="noopener"
             >
-              Tell me about your role
+              Talk about your role
             </a>
 
           </div>
@@ -1570,9 +1581,7 @@
     </section>
 
 
-    <!-- =========================
-         DIFFERENTIATOR
-    ========================= -->
+    <!-- DIFFERENCE -->
 
     <section class="not-about">
 
@@ -1619,9 +1628,7 @@
     </section>
 
 
-    <!-- =========================
-         FAQ
-    ========================= -->
+    <!-- FAQ -->
 
     <section class="faq" id="faq">
 
@@ -1723,9 +1730,7 @@
     </section>
 
 
-    <!-- =========================
-         FINAL CTA
-    ========================= -->
+    <!-- FINAL CTA -->
 
     <section class="final-cta" id="contact">
 
@@ -1736,12 +1741,13 @@
         </div>
 
         <h2>
-          Tell me about your next role.
+          Not sure where to start?
         </h2>
 
         <p>
-          Tell me what role you're targeting, where you're stuck, and what
-          you're trying to improve.
+          Book a free 20-minute intro call. Tell me what you're working
+          towards, what's currently difficult, and we'll see whether I can
+          help.
         </p>
 
         <div
@@ -1749,15 +1755,20 @@
           style="justify-content: center;"
         >
 
-          <!--
-            REPLACE THIS EMAIL WITH YOUR REAL EMAIL ADDRESS.
-          -->
+          <a
+            href="IL-TUO-LINK-CALENDLY"
+            class="button button-primary"
+            target="_blank"
+            rel="noopener"
+          >
+            Book a free intro call
+          </a>
 
           <a
-            href="mailto:hello@thecareerbridge.com"
-            class="button button-primary"
+            href="mailto:annalisa.berti@gmail.com"
+            class="button button-secondary"
           >
-            Get in touch
+            Email me instead
           </a>
 
         </div>
@@ -1769,9 +1780,7 @@
   </main>
 
 
-  <!-- =========================
-       FOOTER
-    ========================= -->
+  <!-- FOOTER -->
 
   <footer>
 
@@ -1792,21 +1801,10 @@
 
       <div class="footer-links">
 
-        <a href="#approach">
-          Approach
-        </a>
-
-        <a href="#experience">
-          Experience
-        </a>
-
-        <a href="#services">
-          Sessions
-        </a>
-
-        <a href="#faq">
-          FAQ
-        </a>
+        <a href="#approach">Approach</a>
+        <a href="#experience">Experience</a>
+        <a href="#services">Sessions</a>
+        <a href="#faq">FAQ</a>
 
       </div>
 
