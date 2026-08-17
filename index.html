@@ -24,20 +24,16 @@
       --max-width: 980px;
     }
 
-
     * {
       box-sizing: border-box;
     }
-
 
     html {
       scroll-behavior: smooth;
     }
 
-
     body {
       margin: 0;
-
       background: var(--background);
       color: var(--text);
 
@@ -51,7 +47,6 @@
       line-height: 1.65;
     }
 
-
     .container {
       width: min(
         var(--max-width),
@@ -61,11 +56,9 @@
       margin: 0 auto;
     }
 
-
     a {
       color: inherit;
     }
-
 
     /* =========================
        NAVIGATION
@@ -73,49 +66,37 @@
 
     header {
       padding: 22px 0;
-
-      border-bottom:
-        1px solid var(--border);
+      border-bottom: 1px solid var(--border);
     }
-
 
     nav {
       display: flex;
-
       align-items: center;
       justify-content: space-between;
     }
 
-
     .logo {
       font-size: 18px;
       font-weight: 700;
-
       letter-spacing: -0.03em;
-
       text-decoration: none;
     }
-
 
     .nav-links {
       display: flex;
       gap: 25px;
 
       color: var(--muted);
-
       font-size: 14px;
     }
-
 
     .nav-links a {
       text-decoration: none;
     }
 
-
     .nav-links a:hover {
       color: var(--text);
     }
-
 
     /* =========================
        GENERAL
@@ -123,11 +104,8 @@
 
     section {
       padding: 80px 0;
-
-      border-top:
-        1px solid var(--border);
+      border-top: 1px solid var(--border);
     }
-
 
     h1 {
       max-width: 760px;
@@ -141,10 +119,8 @@
       );
 
       line-height: 1;
-
       letter-spacing: -0.06em;
     }
-
 
     h2 {
       max-width: 700px;
@@ -158,24 +134,19 @@
       );
 
       line-height: 1.08;
-
       letter-spacing: -0.045em;
     }
-
 
     h3 {
       margin: 0 0 10px;
 
       font-size: 20px;
-
       line-height: 1.25;
     }
-
 
     p {
       margin: 0 0 18px;
     }
-
 
     .eyebrow {
       color: var(--accent);
@@ -184,10 +155,8 @@
       font-weight: 700;
 
       text-transform: uppercase;
-
       letter-spacing: 0.12em;
     }
-
 
     .lead {
       max-width: 690px;
@@ -195,10 +164,8 @@
       color: #444e55;
 
       font-size: 20px;
-
       line-height: 1.55;
     }
-
 
     .intro {
       max-width: 680px;
@@ -207,7 +174,6 @@
 
       font-size: 18px;
     }
-
 
     /* =========================
        BUTTON
@@ -219,7 +185,6 @@
       padding: 12px 18px;
 
       background: var(--text);
-
       color: white;
 
       border-radius: 6px;
@@ -234,13 +199,10 @@
         transform 0.2s ease;
     }
 
-
     .button:hover {
       background: #343c41;
-
       transform: translateY(-1px);
     }
-
 
     /* =========================
        HERO
@@ -248,10 +210,8 @@
 
     .hero {
       padding: 105px 0 90px;
-
       border-top: none;
     }
-
 
     .hero-actions {
       display: flex;
@@ -263,13 +223,10 @@
       margin-top: 30px;
     }
 
-
     .hero-note {
       color: var(--muted);
-
       font-size: 13px;
     }
-
 
     /* =========================
        CARDS
@@ -286,7 +243,6 @@
       margin-top: 40px;
     }
 
-
     .card {
       padding: 26px;
 
@@ -298,11 +254,9 @@
       border-radius: 9px;
     }
 
-
     .card p {
       color: var(--muted);
     }
-
 
     /* =========================
        APPROACH
@@ -315,11 +269,11 @@
         1px solid var(--border);
     }
 
-
     .approach-item {
       display: grid;
 
-      grid-template-columns: 130px 1fr;
+      grid-template-columns:
+        130px 1fr;
 
       gap: 30px;
 
@@ -329,7 +283,6 @@
         1px solid var(--border);
     }
 
-
     .approach-number {
       color: var(--accent);
 
@@ -337,13 +290,10 @@
       font-weight: 700;
     }
 
-
     .approach-item p {
       max-width: 650px;
-
       color: var(--muted);
     }
-
 
     /* =========================
        ABOUT
@@ -360,11 +310,9 @@
       align-items: start;
     }
 
-
     .about-text {
       max-width: 670px;
     }
-
 
     .stats {
       display: grid;
@@ -375,7 +323,6 @@
       gap: 10px;
     }
 
-
     .stat {
       padding: 20px;
 
@@ -383,7 +330,6 @@
 
       border-radius: 8px;
     }
-
 
     .stat strong {
       display: block;
@@ -395,13 +341,11 @@
       letter-spacing: -0.04em;
     }
 
-
     .stat span {
       color: var(--muted);
 
       font-size: 13px;
     }
-
 
     /* =========================
        SERVICES
@@ -409,10 +353,8 @@
 
     .service-card {
       display: flex;
-
       flex-direction: column;
     }
-
 
     .service-card .price {
       margin: 15px 0;
@@ -420,7 +362,6 @@
       font-size: 27px;
       font-weight: 700;
     }
-
 
     .service-card ul {
       margin: 5px 0 25px;
@@ -430,18 +371,14 @@
       color: var(--muted);
     }
 
-
     .service-card li {
       margin: 7px 0;
     }
 
-
     .service-card .button {
       margin-top: auto;
-
       align-self: flex-start;
     }
-
 
     .price-note {
       margin-top: 18px;
@@ -450,7 +387,6 @@
 
       font-size: 13px;
     }
-
 
     /* =========================
        WHO IT'S FOR
@@ -465,7 +401,6 @@
 
       margin-top: 30px;
     }
-
 
     .role {
       padding: 8px 12px;
@@ -482,7 +417,6 @@
       font-size: 14px;
     }
 
-
     /* =========================
        FAQ
     ========================= */
@@ -493,7 +427,6 @@
       margin-top: 35px;
     }
 
-
     .faq-item {
       padding: 22px 0;
 
@@ -501,12 +434,10 @@
         1px solid var(--border);
     }
 
-
     .faq-item:last-child {
       border-bottom:
         1px solid var(--border);
     }
-
 
     .question {
       margin-bottom: 7px;
@@ -514,11 +445,9 @@
       font-weight: 650;
     }
 
-
     .answer {
       color: var(--muted);
     }
-
 
     /* =========================
        CONTACT
@@ -532,13 +461,11 @@
       border-radius: 12px;
     }
 
-
     .contact-box p {
       max-width: 650px;
 
       color: var(--muted);
     }
-
 
     /* =========================
        FOOTER
@@ -551,7 +478,6 @@
 
       font-size: 13px;
     }
-
 
     /* =========================
        MOBILE
@@ -567,39 +493,31 @@
           );
       }
 
-
       .nav-links {
         display: none;
       }
-
 
       section {
         padding: 65px 0;
       }
 
-
       .hero {
         padding: 75px 0;
       }
-
 
       .grid,
       .about {
         grid-template-columns: 1fr;
       }
 
-
       .approach-item {
         grid-template-columns: 1fr;
-
         gap: 8px;
       }
-
 
       .contact-box {
         padding: 32px 25px;
       }
-
 
       .hero-actions {
         align-items: flex-start;
@@ -770,6 +688,7 @@
           </div>
 
 
+
           <div class="card">
 
             <h3>
@@ -785,6 +704,7 @@
             </p>
 
           </div>
+
 
 
           <div class="card">
@@ -969,9 +889,8 @@
 
             <p>
 
-              I've conducted 200+ interviews as an interviewer
-              and hiring manager, most of them during my time
-              at Amazon.
+              I've been involved in 200+ interviews as an interviewer
+              and hiring manager, most of them during my time at Amazon.
 
             </p>
 
@@ -1499,15 +1418,13 @@
 
 
           <p>
-
             No preparation needed.
-
           </p>
 
 
           <!--
-            Replace the email address below
-            with the email you want to use.
+            CHANGE THIS EMAIL ADDRESS
+            TO YOUR REAL EMAIL
           -->
 
           <a
