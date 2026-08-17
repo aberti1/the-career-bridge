@@ -4,15 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>The Career Bridge — Career & Interview Support for Software Engineers</title>
+  <title>The Career Bridge — Career & Interview Support for Software Developers</title>
 
   <meta
     name="description"
-    content="Career and interview support for software engineers and engineering leaders. Connect your experience to the role you want and communicate it clearly."
+    content="Career and interview support for Software Developers. Understand the role, connect it to your experience, and communicate it clearly."
   />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap"
     rel="stylesheet"
@@ -29,6 +30,7 @@
       --accent-dark: #194535;
       --accent-light: #e7efe9;
       --cream: #eeece4;
+
       --max-width: 1180px;
       --radius: 18px;
       --shadow: 0 12px 40px rgba(24, 32, 29, 0.06);
@@ -57,12 +59,21 @@
       text-decoration: none;
     }
 
+    a:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid rgba(36, 92, 74, 0.35);
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
+
     .container {
       width: min(var(--max-width), calc(100% - 48px));
       margin: 0 auto;
     }
 
-    /* NAV */
+    /* =========================
+       NAVIGATION
+    ========================= */
 
     nav {
       height: 82px;
@@ -112,9 +123,16 @@
       background: var(--accent);
       color: white !important;
       font-weight: 600;
+      transition: 0.2s ease;
     }
 
-    /* BUTTONS */
+    .nav-cta:hover {
+      background: var(--accent-dark);
+    }
+
+    /* =========================
+       BUTTONS
+    ========================= */
 
     .button-row {
       display: flex;
@@ -152,7 +170,9 @@
       background: white;
     }
 
-    /* HERO */
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
       padding: 110px 0 90px;
@@ -234,7 +254,9 @@
       color: var(--muted);
     }
 
-    /* STATS */
+    /* =========================
+       STATS
+    ========================= */
 
     .stats {
       border-top: 1px solid var(--border);
@@ -272,7 +294,9 @@
       font-size: 13px;
     }
 
-    /* SECTIONS */
+    /* =========================
+       GENERAL SECTIONS
+    ========================= */
 
     section {
       padding: 110px 0;
@@ -302,7 +326,9 @@
       max-width: 650px;
     }
 
-    /* PROBLEMS */
+    /* =========================
+       PROBLEMS
+    ========================= */
 
     .problems {
       background: var(--surface);
@@ -341,7 +367,9 @@
       font-size: 15px;
     }
 
-    /* APPROACH */
+    /* =========================
+       APPROACH
+    ========================= */
 
     .approach {
       background: var(--cream);
@@ -370,6 +398,10 @@
       font-size: 18px;
       color: var(--muted);
       max-width: 550px;
+    }
+
+    .approach-copy p + p {
+      margin-top: 22px;
     }
 
     .steps {
@@ -415,7 +447,9 @@
       letter-spacing: -0.03em;
     }
 
-    /* EXPERIENCE */
+    /* =========================
+       EXPERIENCE
+    ========================= */
 
     .experience-grid {
       display: grid;
@@ -449,7 +483,9 @@
       font-weight: 500;
     }
 
-    /* AUDIENCE */
+    /* =========================
+       AUDIENCE
+    ========================= */
 
     .audience {
       background: var(--surface);
@@ -499,7 +535,9 @@
       color: var(--muted);
     }
 
-    /* WORK */
+    /* =========================
+       WORK
+    ========================= */
 
     .work-on {
       background: var(--bg);
@@ -518,7 +556,9 @@
       padding: 35px;
     }
 
-    /* INTRO CALL */
+    /* =========================
+       INTRO CALL
+    ========================= */
 
     .intro-call {
       background: var(--surface);
@@ -545,7 +585,9 @@
       max-width: 680px;
     }
 
-    /* FOUNDING */
+    /* =========================
+       FOUNDING SESSIONS
+    ========================= */
 
     .founding {
       background: var(--cream);
@@ -625,7 +667,9 @@
       color: var(--accent);
     }
 
-    /* DIFFERENCE */
+    /* =========================
+       DIFFERENCE
+    ========================= */
 
     .not-about {
       background: var(--surface);
@@ -652,7 +696,9 @@
       border-bottom: 1px solid var(--border);
     }
 
-    /* FAQ */
+    /* =========================
+       FAQ
+    ========================= */
 
     .faq {
       background: var(--bg);
@@ -703,7 +749,9 @@
       font-size: 15px;
     }
 
-    /* CTA */
+    /* =========================
+       FINAL CTA
+    ========================= */
 
     .final-cta {
       background: var(--accent);
@@ -713,7 +761,7 @@
     }
 
     .final-cta .section-label {
-      color: rgba(255,255,255,0.7);
+      color: rgba(255, 255, 255, 0.7);
     }
 
     .final-cta h2 {
@@ -724,7 +772,7 @@
     .final-cta p {
       max-width: 620px;
       margin: 0 auto 32px;
-      color: rgba(255,255,255,0.75);
+      color: rgba(255, 255, 255, 0.75);
       font-size: 18px;
     }
 
@@ -733,16 +781,26 @@
       color: var(--accent);
     }
 
+    .final-cta .button-primary:hover {
+      background: #f4f4f4;
+    }
+
     .final-cta .button-secondary {
-      border-color: rgba(255,255,255,0.3);
+      border-color: rgba(255, 255, 255, 0.3);
       color: white;
     }
 
-    /* FOOTER */
+    .final-cta .button-secondary:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
       background: var(--accent-dark);
-      color: rgba(255,255,255,0.7);
+      color: rgba(255, 255, 255, 0.7);
       padding: 35px 0;
       font-size: 13px;
     }
@@ -763,7 +821,13 @@
       gap: 24px;
     }
 
-    /* MOBILE */
+    .footer-links a:hover {
+      color: white;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
 
     @media (max-width: 900px) {
 
@@ -853,6 +917,14 @@
         font-size: 17px;
       }
 
+      .hero-card {
+        padding: 28px;
+      }
+
+      .hero-card blockquote {
+        font-size: 25px;
+      }
+
       .stats-grid {
         grid-template-columns: 1fr 1fr;
       }
@@ -890,18 +962,24 @@
       .footer-links {
         flex-wrap: wrap;
       }
+
+      .final-cta {
+        padding: 90px 0;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- NAV -->
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
 
-  <nav>
+  <nav aria-label="Main navigation">
     <div class="nav-inner">
 
-      <a href="#" class="logo">
+      <a href="#" class="logo" aria-label="The Career Bridge home">
         The Career <span>Bridge</span>
       </a>
 
@@ -917,7 +995,7 @@
           target="_blank"
           rel="noopener"
         >
-          Free intro call
+          Free 20-minute intro call
         </a>
       </div>
 
@@ -927,7 +1005,9 @@
 
   <main>
 
-    <!-- HERO -->
+    <!-- =========================
+         HERO
+    ========================= -->
 
     <section class="hero">
 
@@ -936,16 +1016,16 @@
         <div>
 
           <div class="eyebrow">
-            Career & interview support for software engineers and engineering leaders
+            Career & interview support for Software Developers
           </div>
 
           <h1>
-            Make your experience work for the role you want.
+            Get the role your experience already qualifies you for.
           </h1>
 
           <p class="hero-description">
-            I help you understand what a hiring team is looking for, identify
-            the strongest evidence in your experience, and communicate it
+            I help Software Developers understand what a role is really
+            looking for, connect it to their experience, and communicate it
             clearly — from the CV to the interview.
           </p>
 
@@ -957,7 +1037,7 @@
               target="_blank"
               rel="noopener"
             >
-              Book a free intro call
+              Book a free 20-minute intro call
             </a>
 
             <a
@@ -994,7 +1074,9 @@
     </section>
 
 
-    <!-- STATS -->
+    <!-- =========================
+         CREDIBILITY
+    ========================= -->
 
     <div class="stats">
 
@@ -1002,7 +1084,7 @@
 
         <div class="stat">
           <div class="stat-number">15+</div>
-          <div class="stat-label">Years in technology</div>
+          <div class="stat-label">Years in tech</div>
         </div>
 
         <div class="stat">
@@ -1029,7 +1111,9 @@
     </div>
 
 
-    <!-- PROBLEMS -->
+    <!-- =========================
+         PROBLEMS
+    ========================= -->
 
     <section class="problems">
 
@@ -1038,17 +1122,17 @@
         <div class="section-header">
 
           <div class="section-label">
-            The problem
+            Sound familiar?
           </div>
 
           <h2>
-            Your experience may be stronger than the way you're presenting it.
+            You probably have more relevant experience than your CV shows.
           </h2>
 
           <p class="section-intro">
-            Applying for a new role isn't just about having the right
-            experience. It's about making the connection between your
-            experience and the role obvious to the person assessing you.
+            The challenge isn't always gaining more experience.
+            Sometimes it's knowing which experience matters — and how to
+            make it visible.
           </p>
 
         </div>
@@ -1065,8 +1149,8 @@
             </h3>
 
             <p>
-              You have relevant experience, but your CV doesn't make the
-              connection with the role clear enough.
+              You have the experience, but your CV doesn't make the
+              connection with the role obvious.
             </p>
 
           </article>
@@ -1081,8 +1165,8 @@
             </h3>
 
             <p>
-              You know your work. The difficult part is deciding which
-              examples matter and communicating them clearly.
+              You know your work. The difficult part is knowing which
+              examples to use and how to communicate them clearly.
             </p>
 
           </article>
@@ -1093,12 +1177,12 @@
             <div class="problem-number">03</div>
 
             <h3>
-              You're moving into a bigger role.
+              You're early in your career.
             </h3>
 
             <p>
-              Senior and leadership roles require you to communicate impact,
-              ownership and decisions — not just the tasks you completed.
+              You don't need ten years of experience to have good stories.
+              Projects, internships and open source can all provide evidence.
             </p>
 
           </article>
@@ -1110,7 +1194,9 @@
     </section>
 
 
-    <!-- APPROACH -->
+    <!-- =========================
+         APPROACH
+    ========================= -->
 
     <section class="approach" id="approach">
 
@@ -1130,8 +1216,6 @@
               Most career advice starts with generic CV templates and
               interview tips.
             </p>
-
-            <br>
 
             <p>
               I take a different approach. Having worked on the hiring side,
@@ -1176,7 +1260,7 @@
 
             <p>
               We identify concrete examples from your work, studies or
-              projects that demonstrate what the role requires.
+              projects.
             </p>
 
           </div>
@@ -1193,8 +1277,7 @@
             </h3>
 
             <p>
-              We improve your CV, examples and interview answers without
-              turning them into something that doesn't sound like you.
+              We improve your CV, examples and interview answers.
             </p>
 
           </div>
@@ -1203,8 +1286,8 @@
 
 
         <div class="approach-quote">
-          Don't just make your CV sound better.
-          Make it more relevant to the role.
+          The goal isn't to make you sound like someone else.
+          It's to make your actual experience easier to recognise.
         </div>
 
       </div>
@@ -1212,7 +1295,9 @@
     </section>
 
 
-    <!-- EXPERIENCE -->
+    <!-- =========================
+         EXPERIENCE
+    ========================= -->
 
     <section id="experience">
 
@@ -1241,8 +1326,8 @@
           </p>
 
           <div class="experience-highlight">
-            The value I bring is the perspective of someone who understands
-            both the candidate side and the hiring side of the process.
+            The advice comes from experience on both sides of the hiring
+            process — not from a generic career-coaching playbook.
           </div>
 
         </div>
@@ -1252,7 +1337,9 @@
     </section>
 
 
-    <!-- AUDIENCE -->
+    <!-- =========================
+         AUDIENCE
+    ========================= -->
 
     <section class="audience">
 
@@ -1265,8 +1352,7 @@
           </div>
 
           <h2>
-            For software engineers and engineering leaders who want to make
-            their experience count.
+            Career support for Software Developers.
           </h2>
 
         </div>
@@ -1275,22 +1361,22 @@
         <div class="audience-main">
 
           <div class="audience-title">
-            From your next engineering role to your next leadership move.
+            From your first role to your next senior position.
           </div>
 
           <div class="audience-copy">
 
             <p>
-              This is particularly useful if you're an experienced software
-              engineer, engineering manager or technical leader preparing for
-              your next role.
+              Whether you're applying for your first job, looking for your
+              next opportunity, preparing for an interview, or trying to
+              communicate your experience more effectively, we'll focus on
+              the specific challenge you're facing.
             </p>
 
             <p>
-              We can work on how you position your experience, identify the
-              strongest evidence for a target role, prepare for interviews,
-              or communicate the leadership and technical decisions already
-              present in your career.
+              If you're moving towards technical leadership, we can also
+              work on how you communicate the leadership and technical
+              decisions already present in your experience.
             </p>
 
           </div>
@@ -1301,14 +1387,14 @@
         <div class="early-career">
 
           <h3>
-            Earlier in your career?
+            Just starting out?
           </h3>
 
           <p>
-            You don't need ten years of experience to have good evidence.
+            You don't need a long employment history.
             University projects, internships, open-source contributions and
-            personal projects can all demonstrate how you work and what you
-            can do.
+            personal projects can all provide evidence of how you work and
+            what you can do.
             <br><br>
             We'll work with what you have.
           </p>
@@ -1320,7 +1406,9 @@
     </section>
 
 
-    <!-- WORK -->
+    <!-- =========================
+         SESSIONS
+    ========================= -->
 
     <section class="work-on">
 
@@ -1333,12 +1421,12 @@
           </div>
 
           <h2>
-            Focus on the role you're actually trying to get.
+            Every session is focused on something specific.
           </h2>
 
           <p class="section-intro">
-            No generic career advice. We'll work on the application,
-            interview or career move that matters to you.
+            No generic career advice. We'll work on the role, application
+            or interview that matters to you.
           </p>
 
         </div>
@@ -1353,12 +1441,12 @@
             </div>
 
             <h3>
-              CV & role fit
+              Your CV
             </h3>
 
             <p>
-              Identify what matters in the target role and make your relevant
-              experience clear, specific and easy to recognise.
+              Make your experience relevant and easy to understand for the
+              role you're targeting.
             </p>
 
           </article>
@@ -1371,12 +1459,12 @@
             </div>
 
             <h3>
-              Interview preparation
+              Your interview
             </h3>
 
             <p>
-              Select your strongest examples, structure your answers and
-              practise communicating your experience with direct feedback.
+              Turn your real experience into clear, structured answers and
+              learn how to communicate your examples effectively.
             </p>
 
           </article>
@@ -1389,12 +1477,12 @@
             </div>
 
             <h3>
-              Career positioning
+              Your next move
             </h3>
 
             <p>
-              Clarify what you're aiming for and how your existing experience
-              supports the next step in your career.
+              Understand what you're aiming for, what the role requires and
+              what you need to demonstrate to get there.
             </p>
 
           </article>
@@ -1406,94 +1494,9 @@
     </section>
 
 
-    <!-- EXAMPLE -->
-
-    <section class="problems">
-
-      <div class="container">
-
-        <div class="section-header">
-
-          <div class="section-label">
-            What this looks like
-          </div>
-
-          <h2>
-            From “what I did” to “why it matters for this role.”
-          </h2>
-
-          <p class="section-intro">
-            The work isn't about inventing better-sounding achievements.
-            It's about finding the evidence already in your experience and
-            connecting it to what the role requires.
-          </p>
-
-        </div>
-
-
-        <div class="problem-grid">
-
-          <article class="problem-card">
-
-            <div class="problem-number">
-              BEFORE
-            </div>
-
-            <h3>
-              “I led several initiatives across multiple teams.”
-            </h3>
-
-            <p>
-              A true statement, but it doesn't tell the hiring team much
-              about scope, ownership or impact.
-            </p>
-
-          </article>
-
-
-          <article class="problem-card">
-
-            <div class="problem-number">
-              THE QUESTION
-            </div>
-
-            <h3>
-              What does this demonstrate?
-            </h3>
-
-            <p>
-              Leadership? Technical judgement? Stakeholder management?
-              Delivery? We identify what the experience actually proves.
-            </p>
-
-          </article>
-
-
-          <article class="problem-card">
-
-            <div class="problem-number">
-              AFTER
-            </div>
-
-            <h3>
-              Make the relevant evidence visible.
-            </h3>
-
-            <p>
-              The result is a clearer story connecting your actual experience
-              to the requirements of the role.
-            </p>
-
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- FREE INTRO CALL -->
+    <!-- =========================
+         FREE INTRO CALL
+    ========================= -->
 
     <section class="intro-call">
 
@@ -1504,7 +1507,7 @@
           <div>
 
             <div class="section-label">
-              Not sure what you need?
+              Not sure yet?
             </div>
 
             <h2>
@@ -1512,7 +1515,7 @@
             </h2>
 
             <p>
-              Book a free 30-minute intro call. Tell me what you're working
+              Book a free 20-minute intro call. Tell me what you're working
               towards, what's currently difficult, and we'll see whether
               I can help.
             </p>
@@ -1528,7 +1531,7 @@
               target="_blank"
               rel="noopener"
             >
-              Book a free intro call
+              Book a free 20-minute intro call
             </a>
 
           </div>
@@ -1540,7 +1543,9 @@
     </section>
 
 
-    <!-- FOUNDING SESSIONS -->
+    <!-- =========================
+         FOUNDING SESSIONS
+    ========================= -->
 
     <section class="founding" id="services">
 
@@ -1549,21 +1554,21 @@
         <div>
 
           <div class="section-label">
-            Founding offer
+            Launch offer
           </div>
 
           <div class="founding-title">
-            Start with a focused session.
+            Founding sessions.
           </div>
 
           <p class="founding-copy">
-            The Career Bridge is currently opening a limited number of
-            founding sessions.
+            I'm currently building The Career Bridge and opening a limited
+            number of initial sessions.
           </p>
 
           <p class="founding-copy">
-            These sessions are offered at a reduced price while I refine the
-            service and learn from the people I work with.
+            These first sessions are offered at a reduced founding price
+            while I develop and refine the service.
           </p>
 
           <p class="founding-note">
@@ -1583,7 +1588,7 @@
               </h3>
 
               <p>
-                60 minutes · Target role + CV review
+                60 minutes · CV + target role
               </p>
             </div>
 
@@ -1633,7 +1638,7 @@
               </h3>
 
               <p>
-                CV + role fit + interview preparation
+                Complete preparation
               </p>
             </div>
 
@@ -1670,7 +1675,9 @@
     </section>
 
 
-    <!-- DIFFERENCE -->
+    <!-- =========================
+         DIFFERENCE
+    ========================= -->
 
     <section class="not-about">
 
@@ -1687,8 +1694,7 @@
           </h2>
 
           <p class="section-intro">
-            It's about making your actual experience easier for a hiring team
-            to understand.
+            It's about making your actual experience easier to understand.
           </p>
 
         </div>
@@ -1707,13 +1713,8 @@
           </li>
 
           <li>
-            <strong>No invented achievements.</strong>
-            Your actual work is the starting point.
-          </li>
-
-          <li>
-            <strong>No one-size-fits-all career advice.</strong>
-            The session is built around your specific situation.
+            <strong>No pretending to be someone else.</strong>
+            Your experience is the starting point.
           </li>
 
         </ul>
@@ -1723,7 +1724,9 @@
     </section>
 
 
-    <!-- FAQ -->
+    <!-- =========================
+         FAQ
+    ========================= -->
 
     <section class="faq" id="faq">
 
@@ -1751,9 +1754,9 @@
             </summary>
 
             <p>
-              Not as a standalone CV-writing service. We first understand the
-              role you're targeting and then improve how your experience is
-              presented for that role.
+              Not as a standalone service. We first understand the role you're
+              targeting and then improve how your experience is presented for
+              that role.
             </p>
 
           </details>
@@ -1791,29 +1794,14 @@
           <details>
 
             <summary>
-              Do you work with engineering managers and technical leaders?
+              Do you only work with Software Developers?
             </summary>
 
             <p>
-              Yes. My background includes engineering management and hiring,
-              so we can work specifically on leadership scope, technical
-              decision-making, organisational impact and communicating those
-              experiences effectively.
-            </p>
-
-          </details>
-
-
-          <details>
-
-            <summary>
-              Do you work with people early in their careers?
-            </summary>
-
-            <p>
-              Yes. You don't need years of professional experience. Projects,
-              internships, university work and open-source contributions can
-              all provide useful evidence.
+              Software Developers are the main focus of The Career Bridge.
+              If your background is closely related to software development,
+              feel free to get in touch and describe what you're working
+              towards.
             </p>
 
           </details>
@@ -1840,7 +1828,9 @@
     </section>
 
 
-    <!-- FINAL CTA -->
+    <!-- =========================
+         FINAL CTA
+    ========================= -->
 
     <section class="final-cta" id="contact">
 
@@ -1851,14 +1841,13 @@
         </div>
 
         <h2>
-          Your experience is already there.
-          Let's make it visible.
+          Not sure where to start?
         </h2>
 
         <p>
-          Book a free 30-minute intro call. Tell me what you're working
-          towards, what's currently difficult, and we'll see whether
-          I can help.
+          Book a free 20-minute intro call. Tell me what you're working
+          towards, what's currently difficult, and we'll see whether I can
+          help.
         </p>
 
         <div
@@ -1872,7 +1861,7 @@
             target="_blank"
             rel="noopener"
           >
-            Book a free intro call
+            Book a free 20-minute intro call
           </a>
 
           <a
@@ -1891,7 +1880,9 @@
   </main>
 
 
-  <!-- FOOTER -->
+  <!-- =========================
+       FOOTER
+  ========================= -->
 
   <footer>
 
@@ -1905,8 +1896,7 @@
 
         <br>
 
-        Career & interview support for software engineers and engineering
-        leaders.
+        Career & interview support for Software Developers.
 
       </div>
 
