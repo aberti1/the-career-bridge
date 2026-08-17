@@ -8,10 +8,11 @@
 
   <meta
     name="description"
-    content="Practical CV and interview support for people looking for their next role in tech."
+    content="Practical CV and interview support for people starting or building their careers in tech."
   >
 
   <style>
+
     :root {
       --background: #faf9f6;
       --text: #20272c;
@@ -23,16 +24,20 @@
       --max-width: 980px;
     }
 
+
     * {
       box-sizing: border-box;
     }
+
 
     html {
       scroll-behavior: smooth;
     }
 
+
     body {
       margin: 0;
+
       background: var(--background);
       color: var(--text);
 
@@ -46,6 +51,7 @@
       line-height: 1.65;
     }
 
+
     .container {
       width: min(
         var(--max-width),
@@ -55,11 +61,15 @@
       margin: 0 auto;
     }
 
+
     a {
       color: inherit;
     }
 
-    /* NAV */
+
+    /* =========================
+       NAVIGATION
+    ========================= */
 
     header {
       padding: 22px 0;
@@ -68,12 +78,14 @@
         1px solid var(--border);
     }
 
+
     nav {
       display: flex;
 
       align-items: center;
       justify-content: space-between;
     }
+
 
     .logo {
       font-size: 18px;
@@ -84,6 +96,7 @@
       text-decoration: none;
     }
 
+
     .nav-links {
       display: flex;
       gap: 25px;
@@ -93,11 +106,20 @@
       font-size: 14px;
     }
 
+
     .nav-links a {
       text-decoration: none;
     }
 
-    /* GENERAL */
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+
+    /* =========================
+       GENERAL
+    ========================= */
 
     section {
       padding: 80px 0;
@@ -105,6 +127,7 @@
       border-top:
         1px solid var(--border);
     }
+
 
     h1 {
       max-width: 760px;
@@ -122,6 +145,7 @@
       letter-spacing: -0.06em;
     }
 
+
     h2 {
       max-width: 700px;
 
@@ -138,6 +162,7 @@
       letter-spacing: -0.045em;
     }
 
+
     h3 {
       margin: 0 0 10px;
 
@@ -146,9 +171,11 @@
       line-height: 1.25;
     }
 
+
     p {
       margin: 0 0 18px;
     }
+
 
     .eyebrow {
       color: var(--accent);
@@ -157,8 +184,10 @@
       font-weight: 700;
 
       text-transform: uppercase;
+
       letter-spacing: 0.12em;
     }
+
 
     .lead {
       max-width: 690px;
@@ -170,11 +199,19 @@
       line-height: 1.55;
     }
 
-    .muted {
+
+    .intro {
+      max-width: 680px;
+
       color: var(--muted);
+
+      font-size: 18px;
     }
 
-    /* BUTTON */
+
+    /* =========================
+       BUTTON
+    ========================= */
 
     .button {
       display: inline-block;
@@ -191,19 +228,30 @@
       font-weight: 650;
 
       text-decoration: none;
+
+      transition:
+        background 0.2s ease,
+        transform 0.2s ease;
     }
+
 
     .button:hover {
       background: #343c41;
+
+      transform: translateY(-1px);
     }
 
-    /* HERO */
+
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
       padding: 105px 0 90px;
 
       border-top: none;
     }
+
 
     .hero-actions {
       display: flex;
@@ -215,23 +263,17 @@
       margin-top: 30px;
     }
 
+
     .hero-note {
       color: var(--muted);
 
       font-size: 13px;
     }
 
-    /* INTRO */
 
-    .intro {
-      max-width: 680px;
-
-      color: var(--muted);
-
-      font-size: 18px;
-    }
-
-    /* CARDS */
+    /* =========================
+       CARDS
+    ========================= */
 
     .grid {
       display: grid;
@@ -244,6 +286,7 @@
       margin-top: 40px;
     }
 
+
     .card {
       padding: 26px;
 
@@ -255,11 +298,15 @@
       border-radius: 9px;
     }
 
+
     .card p {
       color: var(--muted);
     }
 
-    /* APPROACH */
+
+    /* =========================
+       APPROACH
+    ========================= */
 
     .approach-list {
       margin-top: 40px;
@@ -267,6 +314,7 @@
       border-top:
         1px solid var(--border);
     }
+
 
     .approach-item {
       display: grid;
@@ -281,6 +329,7 @@
         1px solid var(--border);
     }
 
+
     .approach-number {
       color: var(--accent);
 
@@ -288,13 +337,17 @@
       font-weight: 700;
     }
 
+
     .approach-item p {
       max-width: 650px;
 
       color: var(--muted);
     }
 
-    /* ABOUT */
+
+    /* =========================
+       ABOUT
+    ========================= */
 
     .about {
       display: grid;
@@ -307,17 +360,21 @@
       align-items: start;
     }
 
+
     .about-text {
       max-width: 670px;
     }
 
+
     .stats {
       display: grid;
 
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns:
+        1fr 1fr;
 
       gap: 10px;
     }
+
 
     .stat {
       padding: 20px;
@@ -326,6 +383,7 @@
 
       border-radius: 8px;
     }
+
 
     .stat strong {
       display: block;
@@ -337,13 +395,17 @@
       letter-spacing: -0.04em;
     }
 
+
     .stat span {
       color: var(--muted);
 
       font-size: 13px;
     }
 
-    /* SERVICES */
+
+    /* =========================
+       SERVICES
+    ========================= */
 
     .service-card {
       display: flex;
@@ -351,12 +413,14 @@
       flex-direction: column;
     }
 
+
     .service-card .price {
       margin: 15px 0;
 
       font-size: 27px;
       font-weight: 700;
     }
+
 
     .service-card ul {
       margin: 5px 0 25px;
@@ -366,15 +430,18 @@
       color: var(--muted);
     }
 
+
     .service-card li {
       margin: 7px 0;
     }
+
 
     .service-card .button {
       margin-top: auto;
 
       align-self: flex-start;
     }
+
 
     .price-note {
       margin-top: 18px;
@@ -384,7 +451,10 @@
       font-size: 13px;
     }
 
-    /* WHO */
+
+    /* =========================
+       WHO IT'S FOR
+    ========================= */
 
     .roles {
       display: flex;
@@ -395,6 +465,7 @@
 
       margin-top: 30px;
     }
+
 
     .role {
       padding: 8px 12px;
@@ -411,13 +482,17 @@
       font-size: 14px;
     }
 
-    /* FAQ */
+
+    /* =========================
+       FAQ
+    ========================= */
 
     .faq {
       max-width: 730px;
 
       margin-top: 35px;
     }
+
 
     .faq-item {
       padding: 22px 0;
@@ -426,10 +501,12 @@
         1px solid var(--border);
     }
 
+
     .faq-item:last-child {
       border-bottom:
         1px solid var(--border);
     }
+
 
     .question {
       margin-bottom: 7px;
@@ -437,11 +514,15 @@
       font-weight: 650;
     }
 
+
     .answer {
       color: var(--muted);
     }
 
-    /* CTA */
+
+    /* =========================
+       CONTACT
+    ========================= */
 
     .contact-box {
       padding: 50px;
@@ -451,13 +532,17 @@
       border-radius: 12px;
     }
 
+
     .contact-box p {
       max-width: 650px;
 
       color: var(--muted);
     }
 
-    /* FOOTER */
+
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
       padding: 30px 0;
@@ -467,7 +552,10 @@
       font-size: 13px;
     }
 
-    /* MOBILE */
+
+    /* =========================
+       MOBILE
+    ========================= */
 
     @media (max-width: 760px) {
 
@@ -479,22 +567,27 @@
           );
       }
 
+
       .nav-links {
         display: none;
       }
+
 
       section {
         padding: 65px 0;
       }
 
+
       .hero {
         padding: 75px 0;
       }
+
 
       .grid,
       .about {
         grid-template-columns: 1fr;
       }
+
 
       .approach-item {
         grid-template-columns: 1fr;
@@ -502,9 +595,11 @@
         gap: 8px;
       }
 
+
       .contact-box {
         padding: 32px 25px;
       }
+
 
       .hero-actions {
         align-items: flex-start;
@@ -513,835 +608,940 @@
 
         gap: 12px;
       }
+
     }
 
   </style>
+
 </head>
 
 
 <body>
 
 
-<header>
+  <!-- =========================
+       HEADER
+  ========================= -->
 
-  <div class="container">
-
-    <nav>
-
-      <a
-        href="#"
-        class="logo"
-      >
-        The Career Bridge
-      </a>
-
-      <div class="nav-links">
-
-        <a href="#approach">
-          Approach
-        </a>
-
-        <a href="#services">
-          Services
-        </a>
-
-        <a href="#about">
-          About
-        </a>
-
-        <a href="#faq">
-          FAQ
-        </a>
-
-      </div>
-
-    </nav>
-
-  </div>
-
-</header>
-
-
-<main>
-
-
-  <!-- HERO -->
-
-  <section class="hero">
+  <header>
 
     <div class="container">
 
-      <div class="eyebrow">
-        Career & interview support for tech
-      </div>
-
-      <h1>
-        Get better at showing what you can do.
-      </h1>
-
-      <p class="lead">
-
-        Looking for a new role can be surprisingly difficult,
-        even when you're good at what you do.
-
-        I help you work out what to highlight from your experience,
-        connect it to the role you're applying for, and prepare
-        for the conversations that come next.
-
-      </p>
-
-      <div class="hero-actions">
+      <nav>
 
         <a
-          href="#contact"
-          class="button"
+          href="#"
+          class="logo"
         >
-          Book a free 15-min intro
+          The Career Bridge
         </a>
 
-        <span class="hero-note">
-          Online · English or Italian
-        </span>
 
-      </div>
+        <div class="nav-links">
 
-    </div>
+          <a href="#approach">
+            Approach
+          </a>
 
-  </section>
+          <a href="#services">
+            Services
+          </a>
 
-
-  <!-- WHY -->
-
-  <section>
-
-    <div class="container">
-
-      <div class="eyebrow">
-        Where I can help
-      </div>
-
-      <h2>
-        Sometimes you don't need more experience.
-        You need to explain the experience you already have.
-      </h2>
-
-      <p class="intro">
-
-        A CV has limited space. An interview has limited time.
-
-        The challenge is often figuring out which parts of your
-        experience matter for a particular role, and how to talk
-        about them without sounding rehearsed.
-
-      </p>
-
-      <div class="grid">
-
-        <div class="card">
-
-          <h3>
-            Your CV isn't getting enough traction
-          </h3>
-
-          <p>
-
-            We look at the role you're targeting and work out
-            whether your CV is making the relevant parts of
-            your experience easy to find.
-
-          </p>
-
-        </div>
-
-
-        <div class="card">
-
-          <h3>
-            You have an interview coming up
-          </h3>
-
-          <p>
-
-            We break down what the company is likely trying
-            to assess and practise how you can demonstrate
-            it using your own experience.
-
-          </p>
-
-        </div>
-
-
-        <div class="card">
-
-          <h3>
-            You're starting out
-          </h3>
-
-          <p>
-
-            You don't need a long employment history to have
-            examples worth talking about.
-
-            Projects, university work, internships, open source
-            and personal projects can all be useful.
-
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- APPROACH -->
-
-  <section id="approach">
-
-    <div class="container">
-
-      <div class="eyebrow">
-        How I work
-      </div>
-
-      <h2>
-        We start with the role, not with a generic checklist.
-      </h2>
-
-      <p class="intro">
-
-        Every role is different.
-
-        Rather than giving you a standard list of interview
-        answers or CV templates, we look at the specific
-        opportunity you're interested in.
-
-      </p>
-
-      <div class="approach-list">
-
-
-        <div class="approach-item">
-
-          <div class="approach-number">
-            01 — UNDERSTAND
-          </div>
-
-          <div>
-
-            <h3>
-              What is the company actually looking for?
-            </h3>
-
-            <p>
-
-              We look at the job description, the level,
-              and the kind of problems the role is likely
-              to involve.
-
-            </p>
-
-          </div>
-
-        </div>
-
-
-        <div class="approach-item">
-
-          <div class="approach-number">
-            02 — CONNECT
-          </div>
-
-          <div>
-
-            <h3>
-              Where is that evidence in your experience?
-            </h3>
-
-            <p>
-
-              We find concrete examples from your work,
-              studies or projects that demonstrate the
-              skills the role needs.
-
-            </p>
-
-          </div>
-
-        </div>
-
-
-        <div class="approach-item">
-
-          <div class="approach-number">
-            03 — COMMUNICATE
-          </div>
-
-          <div>
-
-            <h3>
-              How can you explain it clearly?
-            </h3>
-
-            <p>
-
-              We work on your CV, your examples and,
-              when relevant, your interview answers.
-
-              The aim isn't to memorise scripts.
-
-            </p>
-
-          </div>
-
-        </div>
-
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ABOUT -->
-
-  <section id="about">
-
-    <div class="container">
-
-      <div class="about">
-
-
-        <div class="about-text">
-
-          <div class="eyebrow">
+          <a href="#about">
             About
-          </div>
+          </a>
 
-          <h2>
-            I've spent most of my career on the other side of this process too.
-          </h2>
-
-          <p>
-
-            I've worked in tech for more than 15 years,
-            starting in small agencies and later working
-            at Amazon, startups and mission-driven companies.
-
-          </p>
-
-          <p>
-
-            I've personally been through more than 200 interviews,
-            most of them during my time at Amazon.
-
-          </p>
-
-          <p>
-
-            I've also worked on the hiring side.
-
-            I've designed and shaped selection processes for
-            Software Engineering and SRE roles, and worked on
-            defining hiring approaches for new teams, including
-            Developer Experience.
-
-          </p>
-
-          <p>
-
-            That experience is what I bring to these sessions:
-            a practical understanding of both the candidate
-            experience and what companies are trying to assess.
-
-          </p>
-
-        </div>
-
-
-        <div class="stats">
-
-          <div class="stat">
-
-            <strong>
-              15+
-            </strong>
-
-            <span>
-              years in tech
-            </span>
-
-          </div>
-
-
-          <div class="stat">
-
-            <strong>
-              200+
-            </strong>
-
-            <span>
-              interviews experienced
-            </span>
-
-          </div>
-
-
-          <div class="stat">
-
-            <strong>
-              Amazon
-            </strong>
-
-            <span>
-              experience in big tech
-            </span>
-
-          </div>
-
-
-          <div class="stat">
-
-            <strong>
-              EN / IT
-            </strong>
-
-            <span>
-              sessions in English or Italian
-            </span>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- SERVICES -->
-
-  <section id="services">
-
-    <div class="container">
-
-      <div class="eyebrow">
-        Sessions
-      </div>
-
-      <h2>
-        Start with the part you need help with.
-      </h2>
-
-      <p class="intro">
-
-        These are intentionally simple to start with.
-
-        If you need something more specific, we can discuss
-        it during the initial conversation.
-
-      </p>
-
-
-      <div class="grid">
-
-
-        <div class="card service-card">
-
-          <h3>
-            CV & Positioning
-          </h3>
-
-          <p>
-
-            For when you're applying for roles but aren't
-            getting the response you'd expect.
-
-          </p>
-
-          <div class="price">
-            €75
-          </div>
-
-          <ul>
-
-            <li>
-              60-minute session
-            </li>
-
-            <li>
-              Review of your CV
-            </li>
-
-            <li>
-              Review of a target role
-            </li>
-
-            <li>
-              Identify what to emphasise
-            </li>
-
-            <li>
-              Practical changes to make
-            </li>
-
-          </ul>
-
-          <a
-            href="#contact"
-            class="button"
-          >
-            Get in touch
+          <a href="#faq">
+            FAQ
           </a>
 
         </div>
 
-
-        <div class="card service-card">
-
-          <h3>
-            Interview Preparation
-          </h3>
-
-          <p>
-
-            For an interview you have coming up,
-            or if interviews are an area you want
-            to improve.
-
-          </p>
-
-          <div class="price">
-            €100
-          </div>
-
-          <ul>
-
-            <li>
-              90-minute session
-            </li>
-
-            <li>
-              Role-specific preparation
-            </li>
-
-            <li>
-              Mock interview
-            </li>
-
-            <li>
-              Feedback on your answers
-            </li>
-
-            <li>
-              Identify areas to work on
-            </li>
-
-          </ul>
-
-          <a
-            href="#contact"
-            class="button"
-          >
-            Get in touch
-          </a>
-
-        </div>
-
-
-        <div class="card service-card">
-
-          <h3>
-            CV + Interview
-          </h3>
-
-          <p>
-
-            For when you want to work on both the
-            application and interview stages.
-
-          </p>
-
-          <div class="price">
-            €170
-          </div>
-
-          <ul>
-
-            <li>
-              CV & positioning session
-            </li>
-
-            <li>
-              Interview preparation
-            </li>
-
-            <li>
-              Mock interview
-            </li>
-
-            <li>
-              Role-specific feedback
-            </li>
-
-            <li>
-              Practical next steps
-            </li>
-
-          </ul>
-
-          <a
-            href="#contact"
-            class="button"
-          >
-            Get in touch
-          </a>
-
-        </div>
-
-
-      </div>
-
-
-      <p class="price-note">
-
-        Introductory prices while I'm testing the service
-        as a side business.
-
-      </p>
+      </nav>
 
     </div>
 
-  </section>
+  </header>
 
 
-  <!-- WHO -->
 
-  <section>
+  <main>
 
-    <div class="container">
 
-      <div class="eyebrow">
-        Who I currently work with
-      </div>
+    <!-- =========================
+         HERO
+    ========================= -->
 
-      <h2>
-        People starting or building a career in tech.
-      </h2>
+    <section class="hero">
 
-      <p class="intro">
-
-        This is currently focused on technology roles,
-        where I have the most direct experience.
-
-        That includes people applying for their first role
-        as well as experienced professionals looking for
-        their next move.
-
-      </p>
-
-      <p class="intro">
-
-        For people early in their career, we can work with
-        university projects, internships, open-source work,
-        personal projects and other experiences to find
-        useful examples for applications and interviews.
-
-      </p>
-
-
-      <div class="roles">
-
-        <div class="role">
-          Software Engineering
-        </div>
-
-        <div class="role">
-          Data
-        </div>
-
-        <div class="role">
-          Engineering Management
-        </div>
-
-        <div class="role">
-          Tech Leadership
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- FAQ -->
-
-  <section id="faq">
-
-    <div class="container">
-
-      <div class="eyebrow">
-        FAQ
-      </div>
-
-      <h2>
-        A few practical questions.
-      </h2>
-
-
-      <div class="faq">
-
-
-        <div class="faq-item">
-
-          <div class="question">
-            Do you only work with people in tech?
-          </div>
-
-          <div class="answer">
-
-            For now, yes.
-
-            I'm starting with the areas where I have
-            the most direct experience: Software Engineering,
-            Data, Engineering Management and Tech Leadership.
-
-          </div>
-
-        </div>
-
-
-        <div class="faq-item">
-
-          <div class="question">
-            Do you rewrite my CV for me?
-          </div>
-
-          <div class="answer">
-
-            The focus is on understanding your target role
-            and helping you improve the way your experience
-            is presented.
-
-            I don't want to simply rewrite a CV without
-            understanding what you're applying for.
-
-          </div>
-
-        </div>
-
-
-        <div class="faq-item">
-
-          <div class="question">
-            Can we work in Italian?
-          </div>
-
-          <div class="answer">
-
-            Yes.
-
-            Sessions are available in English or Italian.
-
-          </div>
-
-        </div>
-
-
-        <div class="faq-item">
-
-          <div class="question">
-            Do I need to already have an interview scheduled?
-          </div>
-
-          <div class="answer">
-
-            No.
-
-            We can also work on interview preparation before
-            you start applying, particularly if you want to
-            understand what the roles you're targeting are
-            likely to assess.
-
-          </div>
-
-        </div>
-
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- CONTACT -->
-
-  <section id="contact">
-
-    <div class="container">
-
-      <div class="contact-box">
+      <div class="container">
 
         <div class="eyebrow">
-          Get in touch
+          Career & interview support for tech
         </div>
 
-        <h2>
-          Not sure what you need?
-        </h2>
 
-        <p>
+        <h1>
+          Get better at showing what you can do.
+        </h1>
 
-          Send me a short description of what you're working
-          towards and where you're currently stuck.
 
-          We can have a quick 15-minute conversation and
-          work out whether a session makes sense.
+        <p class="lead">
 
-        </p>
+          Looking for a new role can be surprisingly difficult,
+          even when you're good at what you do.
 
-        <p>
-
-          No preparation needed.
+          I help you work out what to highlight from your experience,
+          connect it to the role you're applying for, and prepare
+          for the conversations that come next.
 
         </p>
 
-        <!-- Replace with your actual email -->
 
-        <a
-          href="mailto:hello@thecareerbridge.com?subject=Career%20Bridge%20-%20Intro"
-          class="button"
-        >
-          Get in touch
-        </a>
+        <div class="hero-actions">
+
+          <a
+            href="#contact"
+            class="button"
+          >
+            Book a free 15-min intro
+          </a>
+
+
+          <span class="hero-note">
+            Online · English or Italian
+          </span>
+
+        </div>
 
       </div>
 
+    </section>
+
+
+
+    <!-- =========================
+         WHERE I CAN HELP
+    ========================= -->
+
+    <section>
+
+      <div class="container">
+
+        <div class="eyebrow">
+          Where I can help
+        </div>
+
+
+        <h2>
+          Sometimes you don't need more experience.
+          You need to explain the experience you already have.
+        </h2>
+
+
+        <p class="intro">
+
+          A CV has limited space. An interview has limited time.
+
+          The challenge is often figuring out which parts of your
+          experience matter for a particular role, and how to talk
+          about them without sounding rehearsed.
+
+        </p>
+
+
+        <div class="grid">
+
+
+          <div class="card">
+
+            <h3>
+              Your CV isn't getting enough traction
+            </h3>
+
+            <p>
+
+              We look at the role you're targeting and work out
+              whether your CV is making the relevant parts of
+              your experience easy to find.
+
+            </p>
+
+          </div>
+
+
+          <div class="card">
+
+            <h3>
+              You have an interview coming up
+            </h3>
+
+            <p>
+
+              We break down what the company is likely trying
+              to assess and practise how you can demonstrate
+              it using your own experience.
+
+            </p>
+
+          </div>
+
+
+          <div class="card">
+
+            <h3>
+              You're starting out
+            </h3>
+
+            <p>
+
+              You don't need a long employment history to have
+              examples worth talking about.
+
+              Projects, university work, internships, open source
+              and personal projects can all be useful.
+
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         APPROACH
+    ========================= -->
+
+    <section id="approach">
+
+      <div class="container">
+
+        <div class="eyebrow">
+          How I work
+        </div>
+
+
+        <h2>
+          We start with the role, not with a generic checklist.
+        </h2>
+
+
+        <p class="intro">
+
+          Every role is different.
+
+          Rather than giving you a standard list of interview
+          answers or CV templates, we look at the specific
+          opportunity you're interested in.
+
+        </p>
+
+
+        <div class="approach-list">
+
+
+          <div class="approach-item">
+
+            <div class="approach-number">
+              01 — UNDERSTAND
+            </div>
+
+
+            <div>
+
+              <h3>
+                What is the company actually looking for?
+              </h3>
+
+              <p>
+
+                We look at the job description, the level,
+                and the kind of problems the role is likely
+                to involve.
+
+              </p>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="approach-item">
+
+            <div class="approach-number">
+              02 — CONNECT
+            </div>
+
+
+            <div>
+
+              <h3>
+                Where is that evidence in your experience?
+              </h3>
+
+              <p>
+
+                We find concrete examples from your work,
+                studies or projects that demonstrate the
+                skills the role needs.
+
+              </p>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="approach-item">
+
+            <div class="approach-number">
+              03 — COMMUNICATE
+            </div>
+
+
+            <div>
+
+              <h3>
+                How can you explain it clearly?
+              </h3>
+
+              <p>
+
+                We work on your CV, your examples and,
+                when relevant, your interview answers.
+
+                The aim isn't to memorise scripts.
+
+              </p>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
+
+    <section id="about">
+
+      <div class="container">
+
+        <div class="about">
+
+
+          <div class="about-text">
+
+            <div class="eyebrow">
+              About
+            </div>
+
+
+            <h2>
+              I've spent most of my career on both sides of the hiring process.
+            </h2>
+
+
+            <p>
+
+              I've worked in tech for more than 15 years,
+              starting in small agencies and later working
+              at Amazon, startups and mission-driven companies.
+
+            </p>
+
+
+            <p>
+
+              I've conducted 200+ interviews as an interviewer
+              and hiring manager, most of them during my time
+              at Amazon.
+
+            </p>
+
+
+            <p>
+
+              I've also designed and shaped hiring processes
+              for different technical roles, including
+              Software Engineering and SRE, and worked on
+              defining hiring approaches for new teams,
+              including Developer Experience.
+
+            </p>
+
+
+            <p>
+
+              That experience gives me a practical understanding
+              of both sides of the hiring process: what candidates
+              experience, and what hiring teams are actually
+              trying to assess.
+
+            </p>
+
+          </div>
+
+
+
+          <div class="stats">
+
+
+            <div class="stat">
+
+              <strong>
+                15+
+              </strong>
+
+              <span>
+                years in tech
+              </span>
+
+            </div>
+
+
+
+            <div class="stat">
+
+              <strong>
+                200+
+              </strong>
+
+              <span>
+                interviews as interviewer & hiring manager
+              </span>
+
+            </div>
+
+
+
+            <div class="stat">
+
+              <strong>
+                Amazon
+              </strong>
+
+              <span>
+                big tech experience
+              </span>
+
+            </div>
+
+
+
+            <div class="stat">
+
+              <strong>
+                EN / IT
+              </strong>
+
+              <span>
+                sessions in English or Italian
+              </span>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         SERVICES
+    ========================= -->
+
+    <section id="services">
+
+      <div class="container">
+
+        <div class="eyebrow">
+          Sessions
+        </div>
+
+
+        <h2>
+          Start with the part you need help with.
+        </h2>
+
+
+        <p class="intro">
+
+          These are intentionally simple to start with.
+
+          If you need something more specific, we can discuss
+          it during the initial conversation.
+
+        </p>
+
+
+        <div class="grid">
+
+
+          <!-- CV -->
+
+          <div class="card service-card">
+
+            <h3>
+              CV & Positioning
+            </h3>
+
+
+            <p>
+
+              For when you're applying for roles but aren't
+              getting the response you'd expect.
+
+            </p>
+
+
+            <div class="price">
+              €75
+            </div>
+
+
+            <ul>
+
+              <li>
+                60-minute session
+              </li>
+
+              <li>
+                Review of your CV
+              </li>
+
+              <li>
+                Review of a target role
+              </li>
+
+              <li>
+                Identify what to emphasise
+              </li>
+
+              <li>
+                Practical changes to make
+              </li>
+
+            </ul>
+
+
+            <a
+              href="#contact"
+              class="button"
+            >
+              Get in touch
+            </a>
+
+          </div>
+
+
+
+          <!-- INTERVIEW -->
+
+          <div class="card service-card">
+
+            <h3>
+              Interview Preparation
+            </h3>
+
+
+            <p>
+
+              For an interview you have coming up,
+              or if interviews are an area you want
+              to improve.
+
+            </p>
+
+
+            <div class="price">
+              €100
+            </div>
+
+
+            <ul>
+
+              <li>
+                90-minute session
+              </li>
+
+              <li>
+                Role-specific preparation
+              </li>
+
+              <li>
+                Mock interview
+              </li>
+
+              <li>
+                Feedback on your answers
+              </li>
+
+              <li>
+                Identify areas to work on
+              </li>
+
+            </ul>
+
+
+            <a
+              href="#contact"
+              class="button"
+            >
+              Get in touch
+            </a>
+
+          </div>
+
+
+
+          <!-- COMBINED -->
+
+          <div class="card service-card">
+
+            <h3>
+              CV + Interview
+            </h3>
+
+
+            <p>
+
+              For when you want to work on both the
+              application and interview stages.
+
+            </p>
+
+
+            <div class="price">
+              €170
+            </div>
+
+
+            <ul>
+
+              <li>
+                CV & positioning session
+              </li>
+
+              <li>
+                Interview preparation
+              </li>
+
+              <li>
+                Mock interview
+              </li>
+
+              <li>
+                Role-specific feedback
+              </li>
+
+              <li>
+                Practical next steps
+              </li>
+
+            </ul>
+
+
+            <a
+              href="#contact"
+              class="button"
+            >
+              Get in touch
+            </a>
+
+          </div>
+
+
+        </div>
+
+
+        <p class="price-note">
+
+          Introductory prices while I'm testing the service
+          as a side business.
+
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         WHO IT'S FOR
+    ========================= -->
+
+    <section>
+
+      <div class="container">
+
+        <div class="eyebrow">
+          Who I currently work with
+        </div>
+
+
+        <h2>
+          People starting or building a career in tech.
+        </h2>
+
+
+        <p class="intro">
+
+          This is currently focused on technology roles,
+          where I have the most direct experience.
+
+          That includes people applying for their first role
+          as well as experienced professionals looking for
+          their next move.
+
+        </p>
+
+
+        <p class="intro">
+
+          For people early in their career, we can work with
+          university projects, internships, open-source work,
+          personal projects and other experiences to find
+          useful examples for applications and interviews.
+
+        </p>
+
+
+        <div class="roles">
+
+
+          <div class="role">
+            Software Engineering
+          </div>
+
+
+          <div class="role">
+            Engineering Management
+          </div>
+
+
+          <div class="role">
+            Tech Leadership
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FAQ
+    ========================= -->
+
+    <section id="faq">
+
+      <div class="container">
+
+        <div class="eyebrow">
+          FAQ
+        </div>
+
+
+        <h2>
+          A few practical questions.
+        </h2>
+
+
+        <div class="faq">
+
+
+          <div class="faq-item">
+
+            <div class="question">
+              Do you only work with people in tech?
+            </div>
+
+
+            <div class="answer">
+
+              For now, yes.
+
+              I'm starting with the areas where I have
+              the most direct experience: Software Engineering,
+              Engineering Management and Tech Leadership.
+
+            </div>
+
+          </div>
+
+
+
+          <div class="faq-item">
+
+            <div class="question">
+              Do you rewrite my CV for me?
+            </div>
+
+
+            <div class="answer">
+
+              The focus is on understanding your target role
+              and helping you improve the way your experience
+              is presented.
+
+              I don't want to simply rewrite a CV without
+              understanding what you're applying for.
+
+            </div>
+
+          </div>
+
+
+
+          <div class="faq-item">
+
+            <div class="question">
+              Can we work in Italian?
+            </div>
+
+
+            <div class="answer">
+
+              Yes.
+
+              Sessions are available in English or Italian.
+
+            </div>
+
+          </div>
+
+
+
+          <div class="faq-item">
+
+            <div class="question">
+              Do I need to already have an interview scheduled?
+            </div>
+
+
+            <div class="answer">
+
+              No.
+
+              We can also work on interview preparation before
+              you start applying, particularly if you want to
+              understand what the roles you're targeting are
+              likely to assess.
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
+
+    <section id="contact">
+
+      <div class="container">
+
+        <div class="contact-box">
+
+          <div class="eyebrow">
+            Get in touch
+          </div>
+
+
+          <h2>
+            Not sure what you need?
+          </h2>
+
+
+          <p>
+
+            Send me a short description of what you're working
+            towards and where you're currently stuck.
+
+            We can have a quick 15-minute conversation and
+            work out whether a session makes sense.
+
+          </p>
+
+
+          <p>
+
+            No preparation needed.
+
+          </p>
+
+
+          <!--
+            Replace the email address below
+            with the email you want to use.
+          -->
+
+          <a
+            href="mailto:hello@thecareerbridge.com?subject=The%20Career%20Bridge%20-%20Intro"
+            class="button"
+          >
+            Get in touch
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="container">
+
+      The Career Bridge · Career & interview support for tech
+      · English & Italian
+
     </div>
 
-  </section>
-
-
-</main>
-
-
-<footer>
-
-  <div class="container">
-
-    The Career Bridge · Career & interview support for tech
-    · English & Italian
-
-  </div>
-
-</footer>
+  </footer>
 
 
 </body>
